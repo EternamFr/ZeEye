@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57161A97CDCE002FE93E /* AppDelegate.swift */; };
-		24DB57191A97CDCE002FE93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57181A97CDCE002FE93E /* ViewController.swift */; };
 		24DB571C1A97CDCE002FE93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571A1A97CDCE002FE93E /* Main.storyboard */; };
 		24DB571E1A97CDCE002FE93E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571D1A97CDCE002FE93E /* Images.xcassets */; };
 		24DB57211A97CDCE002FE93E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571F1A97CDCE002FE93E /* LaunchScreen.xib */; };
 		24DB572D1A97CDCE002FE93E /* ZeEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB572C1A97CDCE002FE93E /* ZeEyeTests.swift */; };
+		24DB57381A97D466002FE93E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57371A97D466002FE93E /* Company.swift */; };
+		24DB573A1A97D59A002FE93E /* CompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57391A97D59A002FE93E /* CompaniesTableViewController.swift */; };
+		24DB573C1A97E791002FE93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB573B1A97E791002FE93E /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		24DB57111A97CDCE002FE93E /* ZeEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DB57151A97CDCE002FE93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DB57161A97CDCE002FE93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24DB57181A97CDCE002FE93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24DB571B1A97CDCE002FE93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24DB571D1A97CDCE002FE93E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24DB57201A97CDCE002FE93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		24DB57261A97CDCE002FE93E /* ZeEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DB572B1A97CDCE002FE93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DB572C1A97CDCE002FE93E /* ZeEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeEyeTests.swift; sourceTree = "<group>"; };
+		24DB57371A97D466002FE93E /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		24DB57391A97D59A002FE93E /* CompaniesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompaniesTableViewController.swift; path = ../CompaniesTableViewController.swift; sourceTree = "<group>"; };
+		24DB573B1A97E791002FE93E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 		24DB57131A97CDCE002FE93E /* ZeEye */ = {
 			isa = PBXGroup;
 			children = (
+				24DB57361A97D45A002FE93E /* Model */,
+				24DB57391A97D59A002FE93E /* CompaniesTableViewController.swift */,
 				24DB57161A97CDCE002FE93E /* AppDelegate.swift */,
-				24DB57181A97CDCE002FE93E /* ViewController.swift */,
 				24DB571A1A97CDCE002FE93E /* Main.storyboard */,
+				24DB573B1A97E791002FE93E /* ViewController.swift */,
 				24DB571D1A97CDCE002FE93E /* Images.xcassets */,
 				24DB571F1A97CDCE002FE93E /* LaunchScreen.xib */,
 				24DB57141A97CDCE002FE93E /* Supporting Files */,
@@ -110,6 +116,14 @@
 				24DB572B1A97CDCE002FE93E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24DB57361A97D45A002FE93E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24DB57371A97D466002FE93E /* Company.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DB57191A97CDCE002FE93E /* ViewController.swift in Sources */,
 				24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */,
+				24DB57381A97D466002FE93E /* Company.swift in Sources */,
+				24DB573C1A97E791002FE93E /* ViewController.swift in Sources */,
+				24DB573A1A97D59A002FE93E /* CompaniesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
