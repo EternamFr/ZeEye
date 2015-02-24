@@ -22,6 +22,7 @@ class Company {
         let companies = [
             Company(name:"Biomar", activeUsers: 1450),
             Company(name:"DesignIt", activeUsers: 2),
+            Company(name:"Djh", activeUsers: 35),
             Company(name:"Kammer", activeUsers: 50)]
         
         return companies
