@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let row = indexPath.row
         cell.titleLabel?.text = companies[row].name
-        cell.subtitleLabel?.text = companies[row].name
+        cell.subtitleLabel?.text = companies[row].description
         cell.activeUsersLabel?.text = "\(companies[row].activeUsers)"
         
         return cell
