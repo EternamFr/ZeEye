@@ -13,6 +13,7 @@ class CompanyTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var activeUsersLabel: UILabel!
+    @IBOutlet var thumbnailImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

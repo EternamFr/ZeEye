@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ggk-y4-UvJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ggk-y4-UvJ">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -26,14 +26,14 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GBa-oM-oA9" id="dAa-Bn-oRQ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JzS-H6-eKO">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JzS-H6-eKO">
                                                     <rect key="frame" x="8" y="8" width="72" height="72"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="72" id="1iz-r2-e9u"/>
                                                         <constraint firstAttribute="width" constant="72" id="sEU-bd-Thu"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PM-8Y-yFK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" text="Subtitle" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PM-8Y-yFK">
                                                     <rect key="frame" x="88" y="41" width="496" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="496" id="8SG-oy-cdP"/>
@@ -49,9 +49,9 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActiveUsers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bye-5p-UJP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ActiveUsers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bye-5p-UJP">
                                                     <rect key="frame" x="468" y="16" width="116" height="27"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -73,31 +73,22 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="DI2-g5-lAZ" firstAttribute="top" secondItem="dAa-Bn-oRQ" secondAttribute="top" constant="20" symbolic="YES" id="3aL-TI-2gB"/>
                                                 <constraint firstItem="DI2-g5-lAZ" firstAttribute="leading" secondItem="JzS-H6-eKO" secondAttribute="trailing" constant="8" id="7Zc-pM-ksp"/>
                                                 <constraint firstItem="DI2-g5-lAZ" firstAttribute="top" secondItem="dAa-Bn-oRQ" secondAttribute="topMargin" constant="8" id="7dq-bw-K1s"/>
                                                 <constraint firstItem="JzS-H6-eKO" firstAttribute="leading" secondItem="dAa-Bn-oRQ" secondAttribute="leading" constant="8" id="FmM-fq-cYd"/>
-                                                <constraint firstAttribute="trailing" secondItem="DI2-g5-lAZ" secondAttribute="trailing" constant="20" symbolic="YES" id="LtX-0d-WIF"/>
                                                 <constraint firstItem="5PM-8Y-yFK" firstAttribute="top" secondItem="DI2-g5-lAZ" secondAttribute="bottom" constant="4" id="YQT-up-Rua"/>
                                                 <constraint firstItem="JzS-H6-eKO" firstAttribute="top" secondItem="dAa-Bn-oRQ" secondAttribute="top" constant="8" id="bq6-ys-s44"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bye-5p-UJP" secondAttribute="trailing" constant="8" id="fWS-84-1HH"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="5PM-8Y-yFK" secondAttribute="trailing" constant="8" id="hHY-g7-AUN"/>
                                                 <constraint firstItem="5PM-8Y-yFK" firstAttribute="leading" secondItem="JzS-H6-eKO" secondAttribute="trailing" constant="8" id="ikp-Vd-TBG"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="5PM-8Y-yFK" secondAttribute="bottom" constant="8" id="sAl-0i-xTp"/>
-                                                <constraint firstAttribute="bottom" secondItem="DI2-g5-lAZ" secondAttribute="bottom" constant="20" symbolic="YES" id="tG2-9d-OtQ"/>
                                                 <constraint firstItem="bye-5p-UJP" firstAttribute="top" secondItem="dAa-Bn-oRQ" secondAttribute="topMargin" constant="8" id="xs2-Tj-GSo"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="3aL-TI-2gB"/>
-                                                    <exclude reference="LtX-0d-WIF"/>
-                                                    <exclude reference="tG2-9d-OtQ"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="activeUsersLabel" destination="bye-5p-UJP" id="qRE-tn-bg8"/>
                                             <outlet property="subtitleLabel" destination="5PM-8Y-yFK" id="xYq-WZ-vq8"/>
+                                            <outlet property="thumbnailImageView" destination="JzS-H6-eKO" id="pdJ-Kz-0fE"/>
                                             <outlet property="titleLabel" destination="DI2-g5-lAZ" id="iGv-II-lX4"/>
                                         </connections>
                                     </tableViewCell>

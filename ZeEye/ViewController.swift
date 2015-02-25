@@ -44,8 +44,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.subtitleLabel?.text = companies[row].description
         cell.activeUsersLabel?.text = "\(companies[row].activeUsers)"
         
+        let path = NSBundle.mainBundle().pathForResource(companies[row].thumbnail, ofType: "jpg")
+        cell.thumbnailImageView.image = UIImage(named: path!)
+        // change to 10.0 to have rounded rectangle
+        cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2.0
+        cell.thumbnailImageView.clipsToBounds = true
+        cell.thumbnailImageView.layer.borderWidth = 1
+        cell.thumbnailImageView.layer.borderColor = UIColor.blackColor().CGColor
+        
         return cell
     }
+
+    // Allow animation before a new cell is going to be displayed
+//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        let view = cell.contentView
+//        view.layer.opacity = 0.0
+//        
+//        UIView.animateWithDuration(0.5, delay: 1.0, options: UIViewAnimationOptions.CurveEaseInOut,
+//            animations: {
+//                () -> Void in
+//                view.layer.opacity = 1
+//            }, completion: nil)
+//    }
     
     /*
     // MARK: - Navigation
