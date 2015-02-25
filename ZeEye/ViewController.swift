@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var tableView: UITableView!
     
     private let companies: [Company] = Company.getAllCompanies()
-    private let textCellIdentifier = "CellSubtitle"
+    private let textCellIdentifier = "CompanyCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +37,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! CompanyTableViewCell
         
         let row = indexPath.row
-        cell.textLabel?.text = companies[row].name
-        cell.detailTextLabel?.text = companies[row].name
+        cell.titleLabel?.text = companies[row].name
+        cell.subtitleLabel?.text = companies[row].name
+        cell.activeUsersLabel?.text = "\(companies[row].activeUsers)"
         
         return cell
     }
+    
     /*
     // MARK: - Navigation
 
