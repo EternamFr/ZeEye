@@ -109,7 +109,7 @@
                                             <outlet property="subtitleLabel" destination="5PM-8Y-yFK" id="xYq-WZ-vq8"/>
                                             <outlet property="thumbnailImageView" destination="JzS-H6-eKO" id="pdJ-Kz-0fE"/>
                                             <outlet property="titleLabel" destination="DI2-g5-lAZ" id="iGv-II-lX4"/>
-                                            <segue destination="7cz-zH-hNL" kind="show" id="NkU-dU-35F"/>
+                                            <segue destination="7cz-zH-hNL" kind="show" identifier="PushDetailCompany" id="4yN-9g-XgR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="413" y="-769"/>
         </scene>
-        <!--View Controller-->
+        <!--Company Detail View Controller-->
         <scene sceneID="RGX-XA-6eI">
             <objects>
-                <viewController id="7cz-zH-hNL" sceneMemberID="viewController">
+                <viewController id="7cz-zH-hNL" customClass="CompanyDetailViewController" customModule="ZeEye" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XuX-5B-liL"/>
                         <viewControllerLayoutGuide type="bottom" id="PER-mc-4OI"/>
@@ -207,6 +207,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="activeUsersLabel" destination="GqA-8y-RE5" id="vTi-8B-xnj"/>
+                        <outlet property="subtitleLabel" destination="RGf-id-Lcd" id="7nh-1r-wtd"/>
+                        <outlet property="thumbnail" destination="EF7-IX-jAv" id="A7U-Uc-gah"/>
+                        <outlet property="titleLabel" destination="3iX-bK-s1s" id="86O-PO-P3s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqi-qW-Y9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

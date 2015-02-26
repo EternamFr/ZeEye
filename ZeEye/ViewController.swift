@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     private let companies: [Company] = Company.getAllCompanies()
     private let textCellIdentifier = "CompanyCell"
+    private var detailAskedFor: Company?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! CompanyTableViewCell
         
         let row = indexPath.row
+        
         cell.titleLabel?.text = companies[row].name
         cell.subtitleLabel?.text = companies[row].description
         cell.activeUsersLabel?.text = "\(companies[row].activeUsers)"
@@ -54,7 +56,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let indexPath = tableView.indexPathForSelectedRow()
+        let company = companies[indexPath!.row]
+        let detailControler = segue.destinationViewController as! CompanyDetailViewController
+        detailControler.company = company
+    }
     // Allow animation before a new cell is going to be displayed
 //    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
 //        let view = cell.contentView

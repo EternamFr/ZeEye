@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */; };
+		24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */; };
 		24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57161A97CDCE002FE93E /* AppDelegate.swift */; };
 		24DB571C1A97CDCE002FE93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571A1A97CDCE002FE93E /* Main.storyboard */; };
 		24DB571E1A97CDCE002FE93E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571D1A97CDCE002FE93E /* Images.xcassets */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		24DB57111A97CDCE002FE93E /* ZeEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DB57151A97CDCE002FE93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DB57161A97CDCE002FE93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		24AE7D881A9FD690003346D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		24DB57081A97CDCE002FE93E = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		24DB57131A97CDCE002FE93E /* ZeEye */ = {
 			isa = PBXGroup;
 			children = (
+				24AE7D881A9FD690003346D4 /* Controllers */,
 				24EB10AF1A9E1BB000039446 /* Images */,
 				24660F2C1A9DFD5000D383A5 /* Views */,
 				24DB57361A97D45A002FE93E /* Model */,
@@ -259,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */,
+				24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */,
 				24DB57381A97D466002FE93E /* Company.swift in Sources */,
 				24DB573C1A97E791002FE93E /* ViewController.swift in Sources */,
 				24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */,
