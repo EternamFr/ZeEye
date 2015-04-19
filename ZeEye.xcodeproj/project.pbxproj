@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2435D6C71AD40F8800CC13E9 /* CustomNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */; };
 		24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */; };
 		24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */; };
 		24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57161A97CDCE002FE93E /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimationController.swift; sourceTree = "<group>"; };
 		24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		24DB57111A97CDCE002FE93E /* ZeEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */,
+				2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				24DB57381A97D466002FE93E /* Company.swift in Sources */,
 				24DB573C1A97E791002FE93E /* ViewController.swift in Sources */,
 				24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */,
+				2435D6C71AD40F8800CC13E9 /* CustomNavigationAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

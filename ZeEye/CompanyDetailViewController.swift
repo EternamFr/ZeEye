@@ -34,6 +34,8 @@ class CompanyDetailViewController: UIViewController {
             thumbnail.clipsToBounds = true
             thumbnail.layer.borderWidth = 1
             thumbnail.layer.borderColor = UIColor.blackColor().CGColor
+            
+            thumbnail.tag = c.id
         }
     }
 

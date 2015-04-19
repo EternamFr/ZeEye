@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var tableView: UITableView!
     
@@ -16,12 +16,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private let textCellIdentifier = "CompanyCell"
     private var detailAskedFor: Company?
     
+    private let customNavigationAnimationController = CustomNavigationAnimationController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.navigationController?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +45,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! CompanyTableViewCell
         
         let row = indexPath.row
-        
         cell.titleLabel?.text = companies[row].name
         cell.subtitleLabel?.text = companies[row].description
         cell.activeUsersLabel?.text = "\(companies[row].activeUsers)"
@@ -53,6 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.thumbnailImageView.clipsToBounds = true
         cell.thumbnailImageView.layer.borderWidth = 1
         cell.thumbnailImageView.layer.borderColor = UIColor.blackColor().CGColor
+        
+        cell.thumbnailImageView.tag = companies[row].id
         
         return cell
     }
@@ -86,5 +91,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Pass the selected object to the new view controller.
     }
     */
-
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        customNavigationAnimationController.reverse = operation == .Pop
+        return customNavigationAnimationController
+    }
 }
