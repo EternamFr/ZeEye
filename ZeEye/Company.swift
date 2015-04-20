@@ -29,7 +29,7 @@ class Company {
             Company(id:1, name:"Biomar", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel blandit arcu, at aliquet metus.", activeUsers: 1450, thumbnail: "biomar"),
             Company(id:2, name:"Design It", description:"Etiam purus ex, malesuada id tincidunt ut, ultricies nec mi.", activeUsers: 2, thumbnail: "designit"),
             Company(id:3, name:"Djh", description:"Suspendisse nec ultricies nulla, a aliquet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.", activeUsers: 35, thumbnail: "djh"),
-            Company(id:4, name:"LÉON", description:"Maecenas quis sapien augue. Curabitur laoreet ipsum elit, et porttitor eros vehicula sed. Phasellus faucibus laoreet urna sit amet condimentum. Morbi sollicitudin interdum pharetra.", activeUsers: 50, thumbnail: "kammer")
+            Company(id:4, name:"Kammeradvokaten", description:"Maecenas quis sapien augue. Curabitur laoreet ipsum elit, et porttitor eros vehicula sed. Phasellus faucibus laoreet urna sit amet condimentum. Morbi sollicitudin interdum pharetra.", activeUsers: 50, thumbnail: "kammer")
         ]
         
         return companies

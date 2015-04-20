@@ -13,7 +13,7 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
     var reverse: Bool = false
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 2.0
+        return 0.8
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -33,7 +33,7 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
             
             // Hide the thumbnail of the incoming detail
             let toThumbnail = (toViewController as? CompanyDetailViewController)!.thumbnail
-            toThumbnail!.alpha = 0.0
+            toThumbnail!.hidden = true
             
             // Place the detail out of the window, on the right
             toViewController.view.frame = CGRectOffset(finalFrameForVC, bounds.size.width, 0)
@@ -48,7 +48,7 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
             snapshot.frame = snapshotStartingFrame
             containerView.addSubview(snapshot)
             
-            fromThumbnail!.alpha = 0.0
+            fromThumbnail!.hidden = true
             
             // Animate the coming of the detail
             UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
@@ -59,8 +59,7 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
                     finished in
                     transitionContext.completeTransition(true)
                     
-                    toThumbnail!.alpha = 1.0
-                    fromThumbnail!.alpha = 1.0
+                    toThumbnail!.hidden = false
                     snapshot.removeFromSuperview()
             })
         } else {
@@ -68,32 +67,31 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
             
             // Hide the thumbnail of the outgoing detail
             let fromThumbnail = (fromViewController as? CompanyDetailViewController)!.thumbnail
-            fromThumbnail!.alpha = 0.0
             
             let snapshot = fromThumbnail!.snapshotViewAfterScreenUpdates(false)
+            fromThumbnail!.hidden = true
             
             let toThumbnail = toViewController.view.viewWithTag(fromThumbnail!.tag)
-            toThumbnail!.alpha = 0.0
+            toThumbnail!.hidden = true
             
-            let snapshotStartingFrame = fromThumbnail!.frame
-            var snapshotEndingFrame = toThumbnail!.convertRect(toThumbnail!.frame, toView: fromThumbnail!.superview)
-            snapshotEndingFrame = CGRectOffset(snapshotEndingFrame, -bounds.size.width - 8, -8)
+            let snapshotStartingFrame = containerView.convertRect(fromThumbnail!.frame, fromView: fromThumbnail!.superview)
+            let snapshotEndingFrame = containerView.convertRect(toThumbnail!.frame, fromView: toThumbnail!.superview)
+            
             snapshot.frame = snapshotStartingFrame
-            fromViewController.view.addSubview(snapshot)
+            containerView.superview!.addSubview(snapshot)
             
             toViewController.view.alpha = 0.25
             toViewController.view.frame = finalFrameForVC
             containerView.addSubview(fromViewController.view)
             UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-                fromViewController.view.frame = CGRectOffset(finalFrameForVC, bounds.size.width, 0)
                 toViewController.view.alpha = 1.0
+                fromViewController.view.frame = CGRectOffset(finalFrameForVC, bounds.size.width, 0)
                 snapshot.frame = snapshotEndingFrame
                 }, completion: {
                     finished in
                     transitionContext.completeTransition(true)
                 
-                    toThumbnail?.alpha = 1.0
-                    fromThumbnail.alpha = 0.0
+                    toThumbnail!.hidden = false
                     snapshot.removeFromSuperview()
             })
         }
