@@ -13,7 +13,16 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
     var reverse: Bool = false
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 0.8
+        return 0.7
+    }
+    
+    override func animationDidStop(theAnimation: CAAnimation!, finished flag: Bool) {
+        if let toThumbnail = theAnimation.valueForKey("toThumbnail") as? UIImageView {
+            toThumbnail.hidden = false
+        }
+        if let snapshot = theAnimation.valueForKey("snapshot") as? UIView {
+            snapshot.removeFromSuperview()
+        }
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -38,6 +47,7 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
             // Place the detail out of the window, on the right
             toViewController.view.frame = CGRectOffset(finalFrameForVC, bounds.size.width, 0)
             
+            // Make a snapshot of the thumbnail
             let fromThumbnail = fromViewController.view.viewWithTag(toThumbnail!.tag)
             let snapshot = fromThumbnail!.snapshotViewAfterScreenUpdates(false)
             
@@ -50,17 +60,60 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
             
             fromThumbnail!.hidden = true
             
+            //
+            let startingCenter = CGPointMake(CGRectGetMidX(snapshotStartingFrame), CGRectGetMidY(snapshotStartingFrame))
+            let endingCenter = CGPointMake(CGRectGetMidX(snapshotEndingFrame), CGRectGetMidY(snapshotEndingFrame))
+            
+            var straffingOffset: CGFloat = 0.0
+            if !CGPointEqualToPoint(startingCenter, endingCenter) {
+                straffingOffset = 200.0
+            }
+            var path = CGPathCreateMutable()
+            CGPathMoveToPoint(path, nil, startingCenter.x, startingCenter.y)
+            CGPathAddQuadCurveToPoint(path, nil, startingCenter.x + straffingOffset, (startingCenter.y + endingCenter.y)/2 , endingCenter.x, endingCenter.y)
+            
+            var straffingRight = CAKeyframeAnimation(keyPath: "position")
+            straffingRight.path = path
+            straffingRight.duration = transitionDuration(transitionContext)
+            straffingRight.calculationMode = kCAAnimationPaced
+            
+            //snapshot.layer.addAnimation(straffingRight, forKey: "position")
+            
+            let growing = CAKeyframeAnimation(keyPath: "transform.scale")
+            growing.values = [1.0, 1.2 , 1.0]
+            growing.duration = transitionDuration(transitionContext)
+            
+//            snapshot.layer.addAnimation(growing, forKey: "what")
+            
+            let group = CAAnimationGroup()
+            group.animations = [straffingRight, growing]
+            group.duration = transitionDuration(transitionContext)
+            group.delegate = self
+            group.setValue(snapshot, forKey: "snapshot")
+            group.setValue(toThumbnail!, forKey: "toThumbnail")
+            group.removedOnCompletion = false
+            group.fillMode = kCAFillModeForwards
+            snapshot.layer.addAnimation(group, forKey: nil)
+
+//            var basicAnim = CABasicAnimation(keyPath: "position")
+//            basicAnim.fromValue = NSValue(CGPoint: startingCenter)
+//            basicAnim.toValue = NSValue(CGPoint: endingCenter)
+//            basicAnim.duration = transitionDuration(transitionContext)
+//            basicAnim.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionLinear)
+//            
+//            snapshot.layer.addAnimation(basicAnim, forKey: "position")
+            
             // Animate the coming of the detail
             UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
                 fromViewController.view.alpha = 0.25
                 toViewController.view.frame = finalFrameForVC
-                snapshot.frame = snapshotEndingFrame
+                //snapshot.frame = snapshotEndingFrame
                 }, completion: {
                     finished in
                     transitionContext.completeTransition(true)
                     
-                    toThumbnail!.hidden = false
-                    snapshot.removeFromSuperview()
+                    //toThumbnail!.hidden = false
+                    //snapshot.removeFromSuperview()
             })
         } else {
             containerView.addSubview(toViewController.view)
