@@ -24,7 +24,7 @@ class CompanyDetailViewController: UIViewController {
         if let c = company {
             titleLabel.text = c.name
             subtitleLabel.text = c.description
-            activeUsersLabel.text = "\(c.activeUsers)"
+            activeUsersLabel.text = "\(c.activeUsers!)"
             
             // TODO: refactor to remove duplicate in ViewController + move that out of main thread/hard coded images
             let path = NSBundle.mainBundle().pathForResource(c.thumbnail, ofType: "jpg")
@@ -35,7 +35,7 @@ class CompanyDetailViewController: UIViewController {
             thumbnail.layer.borderWidth = 1
             thumbnail.layer.borderColor = UIColor.blackColor().CGColor
             
-            thumbnail.tag = c.id
+            thumbnail.tag = c.id!
         }
     }
 

@@ -8,7 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2435D6C71AD40F8800CC13E9 /* CustomNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */; };
+		245EA6931BA5833A008FF677 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6921BA5833A008FF677 /* NetworkOperation.swift */; settings = {ASSET_TAGS = (); }; };
+		245EA6951BA58ED6008FF677 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6941BA58ED6008FF677 /* CompanyService.swift */; settings = {ASSET_TAGS = (); }; };
+		245EA6981BA59F84008FF677 /* CompanyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6971BA59F84008FF677 /* CompanyServiceTests.swift */; settings = {ASSET_TAGS = (); }; };
+		245EA6991BA5A09F008FF677 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6941BA58ED6008FF677 /* CompanyService.swift */; settings = {ASSET_TAGS = (); }; };
+		245EA69A1BA5A1B6008FF677 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57371A97D466002FE93E /* Company.swift */; settings = {ASSET_TAGS = (); }; };
+		245EA69B1BA5A31C008FF677 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6921BA5833A008FF677 /* NetworkOperation.swift */; settings = {ASSET_TAGS = (); }; };
 		24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */; };
+		24668E5E1BAB589100BAFFF9 /* EvaluationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */; settings = {ASSET_TAGS = (); }; };
 		24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */; };
 		24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57161A97CDCE002FE93E /* AppDelegate.swift */; };
 		24DB571C1A97CDCE002FE93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571A1A97CDCE002FE93E /* Main.storyboard */; };
@@ -35,7 +42,11 @@
 
 /* Begin PBXFileReference section */
 		2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimationController.swift; sourceTree = "<group>"; };
+		245EA6921BA5833A008FF677 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		245EA6941BA58ED6008FF677 /* CompanyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
+		245EA6971BA59F84008FF677 /* CompanyServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyServiceTests.swift; sourceTree = "<group>"; };
 		24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationType.swift; sourceTree = "<group>"; };
 		24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		24DB57111A97CDCE002FE93E /* ZeEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DB57151A97CDCE002FE93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245EA6911BA5831E008FF677 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				245EA6921BA5833A008FF677 /* NetworkOperation.swift */,
+				245EA6941BA58ED6008FF677 /* CompanyService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		245EA6961BA59F63008FF677 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				245EA6971BA59F84008FF677 /* CompanyServiceTests.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		24660F2C1A9DFD5000D383A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +138,7 @@
 		24DB57131A97CDCE002FE93E /* ZeEye */ = {
 			isa = PBXGroup;
 			children = (
+				245EA6911BA5831E008FF677 /* Services */,
 				24AE7D881A9FD690003346D4 /* Controllers */,
 				24EB10AF1A9E1BB000039446 /* Images */,
 				24660F2C1A9DFD5000D383A5 /* Views */,
@@ -135,6 +164,7 @@
 		24DB57291A97CDCE002FE93E /* ZeEyeTests */ = {
 			isa = PBXGroup;
 			children = (
+				245EA6961BA59F63008FF677 /* Services */,
 				24DB572C1A97CDCE002FE93E /* ZeEyeTests.swift */,
 				24DB572A1A97CDCE002FE93E /* Supporting Files */,
 			);
@@ -153,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				24DB57371A97D466002FE93E /* Company.swift */,
+				24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -212,7 +243,8 @@
 		24DB57091A97CDCE002FE93E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Christy";
 				TargetAttributes = {
 					24DB57101A97CDCE002FE93E = {
@@ -273,11 +305,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */,
+				24668E5E1BAB589100BAFFF9 /* EvaluationType.swift in Sources */,
 				24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */,
 				24DB57381A97D466002FE93E /* Company.swift in Sources */,
 				24DB573C1A97E791002FE93E /* ViewController.swift in Sources */,
 				24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */,
 				2435D6C71AD40F8800CC13E9 /* CustomNavigationAnimationController.swift in Sources */,
+				245EA6931BA5833A008FF677 /* NetworkOperation.swift in Sources */,
+				245EA6951BA58ED6008FF677 /* CompanyService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DB572D1A97CDCE002FE93E /* ZeEyeTests.swift in Sources */,
+				245EA6991BA5A09F008FF677 /* CompanyService.swift in Sources */,
+				245EA69B1BA5A31C008FF677 /* NetworkOperation.swift in Sources */,
+				245EA6981BA59F84008FF677 /* CompanyServiceTests.swift in Sources */,
+				245EA69A1BA5A1B6008FF677 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +379,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -404,6 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZeEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ZeFrog.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -414,6 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZeEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ZeFrog.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -432,6 +474,7 @@
 				);
 				INFOPLIST_FILE = ZeEyeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ZeFrog.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZeEye.app/ZeEye";
 			};
@@ -447,6 +490,7 @@
 				);
 				INFOPLIST_FILE = ZeEyeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ZeFrog.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZeEye.app/ZeEye";
 			};
