@@ -14,7 +14,8 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var activeUsersLabel: UILabel!
-    @IBOutlet weak var processCountsStackView: UIStackView!
+    @IBOutlet weak var musCountLabel: UILabel!
+    @IBOutlet weak var threeSixtyCountLabel: UILabel!
     
     var company: Company?
     
@@ -26,6 +27,14 @@ class CompanyDetailViewController: UIViewController {
             titleLabel.text = c.name
             subtitleLabel.text = c.description
             activeUsersLabel.text = "\(c.activeUsers!)"
+            
+            if let musCount = c.musProcessesCount {
+                musCountLabel.text = "\(musCount)"
+            }
+            
+            if let threeSixtyCount = c.threeSixtyProcessesCount {
+                threeSixtyCountLabel.text = "\(threeSixtyCount)"
+            }
             
             // TODO: refactor to remove duplicate in ViewController + move that out of main thread/hard coded images
             let path = NSBundle.mainBundle().pathForResource(c.thumbnail, ofType: "jpg")
