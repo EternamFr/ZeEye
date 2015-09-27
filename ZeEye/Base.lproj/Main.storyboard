@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NqJ-rQ-bgL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NqJ-rQ-bgL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -59,7 +59,7 @@
                                                         <constraint firstAttribute="width" constant="72" id="sEU-bd-Thu"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" text="Subtitle" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PM-8Y-yFK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" text="Subtitle" textAlignment="justified" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PM-8Y-yFK">
                                                     <rect key="frame" x="88" y="41" width="496" height="26"/>
                                                     <animations/>
                                                     <constraints>
@@ -165,8 +165,16 @@
                                     <constraint firstAttribute="width" constant="72" id="dzU-32-Xg9"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" text="Subtitle" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGf-id-Lcd">
-                                <rect key="frame" x="88" y="101" width="504" height="15"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="human.png" translatesAutoresizingMaskIntoConstraints="NO" id="kJp-Sp-pfk">
+                                <rect key="frame" x="556" y="90" width="36" height="36"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="0Ks-WD-iLP"/>
+                                    <constraint firstAttribute="height" constant="36" id="dSp-qv-Rku"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Subtitle" textAlignment="justified" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGf-id-Lcd">
+                                <rect key="frame" x="8" y="152" width="584" height="14.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="4Ty-gQ-jC6"/>
@@ -183,7 +191,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iX-bK-s1s">
-                                <rect key="frame" x="88" y="72" width="250" height="21"/>
+                                <rect key="frame" x="88" y="97" width="250" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2ar-M2-7Xd"/>
@@ -194,7 +202,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActiveUsers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqA-8y-RE5">
-                                <rect key="frame" x="476" y="72" width="116" height="27"/>
+                                <rect key="frame" x="432" y="94" width="116" height="27"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Ksp-OV-ywA"/>
@@ -204,20 +212,30 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1V5-Q4-oJf">
+                                <rect key="frame" x="8" y="174.5" width="584" height="417.5"/>
+                                <animations/>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RGf-id-Lcd" firstAttribute="trailing" secondItem="809-IR-8dy" secondAttribute="trailingMargin" constant="8" id="4KO-Gx-G95"/>
-                            <constraint firstItem="3iX-bK-s1s" firstAttribute="top" secondItem="XuX-5B-liL" secondAttribute="bottom" constant="8" id="7Ww-ez-4RD"/>
-                            <constraint firstItem="RGf-id-Lcd" firstAttribute="top" secondItem="3iX-bK-s1s" secondAttribute="bottom" constant="8" id="8HU-e9-ZKb"/>
+                            <constraint firstItem="kJp-Sp-pfk" firstAttribute="top" secondItem="XuX-5B-liL" secondAttribute="bottom" constant="26" id="5Vz-Dp-1YZ"/>
+                            <constraint firstAttribute="trailing" secondItem="1V5-Q4-oJf" secondAttribute="trailing" constant="8" id="6y2-MJ-Lb9"/>
+                            <constraint firstItem="3iX-bK-s1s" firstAttribute="top" secondItem="XuX-5B-liL" secondAttribute="bottom" constant="33" id="7Ww-ez-4RD"/>
                             <constraint firstItem="PER-mc-4OI" firstAttribute="top" relation="lessThanOrEqual" secondItem="RGf-id-Lcd" secondAttribute="bottom" constant="8" id="Cct-du-Rx6"/>
-                            <constraint firstAttribute="trailing" secondItem="GqA-8y-RE5" secondAttribute="trailing" constant="8" id="Lmv-u0-tMq"/>
-                            <constraint firstItem="GqA-8y-RE5" firstAttribute="top" secondItem="XuX-5B-liL" secondAttribute="bottom" constant="8" id="QJ2-oX-kGC"/>
+                            <constraint firstItem="GqA-8y-RE5" firstAttribute="centerY" secondItem="kJp-Sp-pfk" secondAttribute="centerY" constant="-0.5" id="Gje-YB-vYL"/>
+                            <constraint firstItem="1V5-Q4-oJf" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="8" id="QkM-Z2-vg0"/>
                             <constraint firstItem="EF7-IX-jAv" firstAttribute="top" secondItem="XuX-5B-liL" secondAttribute="bottom" constant="8" id="WJw-OK-caC"/>
-                            <constraint firstItem="RGf-id-Lcd" firstAttribute="leading" secondItem="EF7-IX-jAv" secondAttribute="trailing" constant="8" id="gw9-Ro-MMf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RGf-id-Lcd" secondAttribute="trailing" constant="-12" id="XH0-Bz-Ggx" userLabel="trailing = Subtitle Label.trailing  + 8"/>
+                            <constraint firstItem="1V5-Q4-oJf" firstAttribute="top" secondItem="RGf-id-Lcd" secondAttribute="bottom" constant="8" id="Xg2-9Z-I6N"/>
+                            <constraint firstAttribute="trailing" secondItem="kJp-Sp-pfk" secondAttribute="trailing" constant="8" id="acT-Im-b1M"/>
+                            <constraint firstItem="RGf-id-Lcd" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="8" id="b3M-zR-8uG"/>
+                            <constraint firstItem="RGf-id-Lcd" firstAttribute="top" secondItem="EF7-IX-jAv" secondAttribute="bottom" constant="8" id="ceI-y7-2BV"/>
+                            <constraint firstItem="PER-mc-4OI" firstAttribute="top" secondItem="1V5-Q4-oJf" secondAttribute="bottom" constant="8" id="etC-H2-wfy"/>
                             <constraint firstItem="3iX-bK-s1s" firstAttribute="leading" secondItem="EF7-IX-jAv" secondAttribute="trailing" constant="8" id="hLZ-Rd-aAX"/>
                             <constraint firstItem="EF7-IX-jAv" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="8" id="mPm-zf-n8E"/>
+                            <constraint firstItem="kJp-Sp-pfk" firstAttribute="leading" secondItem="GqA-8y-RE5" secondAttribute="trailing" constant="8" id="weD-AW-8GO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -227,6 +245,7 @@
                     </view>
                     <connections>
                         <outlet property="activeUsersLabel" destination="GqA-8y-RE5" id="vTi-8B-xnj"/>
+                        <outlet property="processCountsStackView" destination="1V5-Q4-oJf" id="TO2-3d-gLr"/>
                         <outlet property="subtitleLabel" destination="RGf-id-Lcd" id="7nh-1r-wtd"/>
                         <outlet property="thumbnail" destination="EF7-IX-jAv" id="A7U-Uc-gah"/>
                         <outlet property="titleLabel" destination="3iX-bK-s1s" id="86O-PO-P3s"/>
@@ -237,4 +256,7 @@
             <point key="canvasLocation" x="415" y="-23"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="human.png" width="30" height="61"/>
+    </resources>
 </document>

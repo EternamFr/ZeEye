@@ -97,7 +97,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let path = NSBundle.mainBundle().pathForResource(company.thumbnail, ofType: "jpg")
             cell.thumbnailImageView.image = UIImage(named: path!)
             // change to 10.0 to have rounded rectangle
-            cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2.0
+            cell.thumbnailImageView.layer.cornerRadius = 5.0 // cell.thumbnailImageView.frame.size.width / 2.0
             cell.thumbnailImageView.clipsToBounds = true
             cell.thumbnailImageView.layer.borderWidth = 1
             cell.thumbnailImageView.layer.borderColor = UIColor.blackColor().CGColor

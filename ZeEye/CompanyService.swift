@@ -11,7 +11,9 @@ import Foundation
 struct CompanyService {
     
     func GetCompanies(completion: ([Company]?->Void)) {
-        guard let companiesURL = NSURL(string: "http://192.168.1.123/companies.json")
+        // https://organisations.xafir.com/activities.json
+        // http://192.168.1.123/companies.json
+        guard let companiesURL = NSURL(string: "https://organisations.xafir.com/companies.json")
             else {
                 print("Could not construct a valid URL")
                 return
@@ -33,7 +35,7 @@ struct CompanyService {
         
         for (_, value) in companies.enumerate() {
             if let companyDictionary = value as? [String:AnyObject] {
-                let company = Company(firmDictionary: companyDictionary);
+                let company = Company(json: companyDictionary);
                 result.append(company);
             }
         }

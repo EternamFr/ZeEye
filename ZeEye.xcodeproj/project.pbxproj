@@ -28,6 +28,11 @@
 		24EB10AC1A9E1BA600039446 /* designit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EB10A81A9E1BA600039446 /* designit.jpg */; };
 		24EB10AD1A9E1BA600039446 /* djh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EB10A91A9E1BA600039446 /* djh.jpg */; };
 		24EB10AE1A9E1BA600039446 /* kammer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EB10AA1A9E1BA600039446 /* kammer.jpg */; };
+		24EB3CA31BB80AA3007DE9EB /* human.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EB3CA21BB80AA3007DE9EB /* human.png */; settings = {ASSET_TAGS = (); }; };
+		24EB3CA51BB80C23007DE9EB /* mus.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EB3CA41BB80C23007DE9EB /* mus.png */; settings = {ASSET_TAGS = (); }; };
+		24EB3CA71BB80D1F007DE9EB /* threesixty.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EB3CA61BB80D1F007DE9EB /* threesixty.png */; settings = {ASSET_TAGS = (); }; };
+		24FFD2BE1BB061A9000DFF17 /* EvaluationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */; settings = {ASSET_TAGS = (); }; };
+		24FFD2C01BB0675F000DFF17 /* face_monkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 24FFD2BF1BB0675F000DFF17 /* face_monkey.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,10 @@
 		24EB10A81A9E1BA600039446 /* designit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = designit.jpg; sourceTree = "<group>"; };
 		24EB10A91A9E1BA600039446 /* djh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = djh.jpg; sourceTree = "<group>"; };
 		24EB10AA1A9E1BA600039446 /* kammer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kammer.jpg; sourceTree = "<group>"; };
+		24EB3CA21BB80AA3007DE9EB /* human.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human.png; sourceTree = "<group>"; };
+		24EB3CA41BB80C23007DE9EB /* mus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mus.png; sourceTree = "<group>"; };
+		24EB3CA61BB80D1F007DE9EB /* threesixty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = threesixty.png; sourceTree = "<group>"; };
+		24FFD2BF1BB0675F000DFF17 /* face_monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = face_monkey.png; path = ../../Downloads/face_monkey.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +200,10 @@
 		24EB10AF1A9E1BB000039446 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				24EB3CA61BB80D1F007DE9EB /* threesixty.png */,
+				24EB3CA41BB80C23007DE9EB /* mus.png */,
+				24EB3CA21BB80AA3007DE9EB /* human.png */,
+				24FFD2BF1BB0675F000DFF17 /* face_monkey.png */,
 				24EB10A71A9E1BA600039446 /* biomar.jpg */,
 				24EB10A81A9E1BA600039446 /* designit.jpg */,
 				24EB10A91A9E1BA600039446 /* djh.jpg */,
@@ -281,8 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				24EB10AD1A9E1BA600039446 /* djh.jpg in Resources */,
+				24EB3CA71BB80D1F007DE9EB /* threesixty.png in Resources */,
+				24EB3CA51BB80C23007DE9EB /* mus.png in Resources */,
+				24EB3CA31BB80AA3007DE9EB /* human.png in Resources */,
 				24DB571C1A97CDCE002FE93E /* Main.storyboard in Resources */,
 				24DB57211A97CDCE002FE93E /* LaunchScreen.xib in Resources */,
+				24FFD2C01BB0675F000DFF17 /* face_monkey.png in Resources */,
 				24DB571E1A97CDCE002FE93E /* Images.xcassets in Resources */,
 				24EB10AC1A9E1BA600039446 /* designit.jpg in Resources */,
 				24EB10AE1A9E1BA600039446 /* kammer.jpg in Resources */,
@@ -321,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DB572D1A97CDCE002FE93E /* ZeEyeTests.swift in Sources */,
+				24FFD2BE1BB061A9000DFF17 /* EvaluationType.swift in Sources */,
 				245EA6991BA5A09F008FF677 /* CompanyService.swift in Sources */,
 				245EA69B1BA5A31C008FF677 /* NetworkOperation.swift in Sources */,
 				245EA6981BA59F84008FF677 /* CompanyServiceTests.swift in Sources */,
@@ -394,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -431,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

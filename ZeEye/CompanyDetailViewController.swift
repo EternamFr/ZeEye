@@ -14,6 +14,7 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var activeUsersLabel: UILabel!
+    @IBOutlet weak var processCountsStackView: UIStackView!
     
     var company: Company?
     
@@ -30,7 +31,7 @@ class CompanyDetailViewController: UIViewController {
             let path = NSBundle.mainBundle().pathForResource(c.thumbnail, ofType: "jpg")
             thumbnail.image = UIImage(named: path!)
             // change to 10.0 to have rounded rectangle
-            thumbnail.layer.cornerRadius = thumbnail.frame.size.width / 2.0
+            thumbnail.layer.cornerRadius = 5.0 // thumbnail.frame.size.width / 2.0
             thumbnail.clipsToBounds = true
             thumbnail.layer.borderWidth = 1
             thumbnail.layer.borderColor = UIColor.blackColor().CGColor

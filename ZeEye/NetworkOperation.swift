@@ -28,7 +28,7 @@ public class NetworkOperation {
         let dataTask = session.dataTaskWithRequest(request) {
             (let data: NSData?, let response: NSURLResponse?, let error: NSError?) -> Void in
             
-            sleep(4);
+            //sleep(4);
             
             // 1: Check HTTP Response for successful GET request
             guard let httpResponse = response as? NSHTTPURLResponse, receivedData = data

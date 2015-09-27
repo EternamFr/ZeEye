@@ -12,4 +12,3 @@ public enum EvaluationType: String {
     case mus = "mus"
     case threesixty = "threesixty"
 }
-

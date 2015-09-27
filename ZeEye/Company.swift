@@ -10,30 +10,39 @@
 
 import Foundation
 
-struct Company {
+public struct Company {
     let id: Int?
     let name: String?
     let description: String?
     let activeUsers: Int?
     let thumbnail: String?
+    var musProcessesCount: Int?
+    var threeSixtyProcessesCount: Int?
     
-    init(firmDictionary: [String:AnyObject]) {
-        id = firmDictionary["id"] as? Int
-        name = firmDictionary["name"] as? String
-        description = firmDictionary["description"] as? String
-        activeUsers = firmDictionary["users"] as? Int
-        thumbnail = firmDictionary["thumbnail"] as? String
+    init(json: [String:AnyObject]) {
+        id = json["id"] as? Int
+        name = json["name"] as? String
+        description = json["description"] as? String
+        activeUsers = json["users"] as? Int
+        thumbnail = json["thumbnail"] as? String
         
-        if let processes = firmDictionary["processes"] as? [String:Int] {
+        if let processes = json["processes"] as? [String:Int] {
             for (key, value) in processes {
                 switch key {
-                case "mus":
-                    break;
+                case EvaluationType.mus.rawValue:
+                    musProcessesCount = value
+                case EvaluationType.threesixty.rawValue:
+                    threeSixtyProcessesCount = value
                 default:
-                    break;
+                    break
                 }
             }
         }
         
     }
+}
+
+struct ProcessCount {
+    let evaluationType: EvaluationType?
+    let count: Int?
 }
