@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2435D6C71AD40F8800CC13E9 /* CustomNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */; };
 		243D887A1BB81DE400E1B554 /* HumanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243D88791BB81DE400E1B554 /* HumanView.swift */; settings = {ASSET_TAGS = (); }; };
+		245B812E1BB87E0A00DE1420 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B812D1BB87E0A00DE1420 /* LineChart.swift */; settings = {ASSET_TAGS = (); }; };
 		245EA6931BA5833A008FF677 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6921BA5833A008FF677 /* NetworkOperation.swift */; settings = {ASSET_TAGS = (); }; };
 		245EA6951BA58ED6008FF677 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6941BA58ED6008FF677 /* CompanyService.swift */; settings = {ASSET_TAGS = (); }; };
 		245EA6981BA59F84008FF677 /* CompanyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6971BA59F84008FF677 /* CompanyServiceTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimationController.swift; sourceTree = "<group>"; };
 		243D88791BB81DE400E1B554 /* HumanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumanView.swift; sourceTree = "<group>"; };
+		245B812D1BB87E0A00DE1420 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		245EA6921BA5833A008FF677 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		245EA6941BA58ED6008FF677 /* CompanyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
 		245EA6971BA59F84008FF677 /* CompanyServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyServiceTests.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243D887B1BB87D8600E1B554 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				245B812D1BB87E0A00DE1420 /* LineChart.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		245EA6911BA5831E008FF677 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		24DB57131A97CDCE002FE93E /* ZeEye */ = {
 			isa = PBXGroup;
 			children = (
+				243D887B1BB87D8600E1B554 /* Utilities */,
 				245EA6911BA5831E008FF677 /* Services */,
 				24AE7D881A9FD690003346D4 /* Controllers */,
 				24EB10AF1A9E1BB000039446 /* Images */,
@@ -323,6 +334,7 @@
 				24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */,
 				24DB57381A97D466002FE93E /* Company.swift in Sources */,
 				24EB3CA91BB812D4007DE9EB /* MusView.swift in Sources */,
+				245B812E1BB87E0A00DE1420 /* LineChart.swift in Sources */,
 				24DB573C1A97E791002FE93E /* ViewController.swift in Sources */,
 				243D887A1BB81DE400E1B554 /* HumanView.swift in Sources */,
 				24EB3CAB1BB81345007DE9EB /* ThreeSixtyView.swift in Sources */,

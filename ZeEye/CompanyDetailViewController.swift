@@ -16,6 +16,7 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var activeUsersLabel: UILabel!
     @IBOutlet weak var musCountLabel: UILabel!
     @IBOutlet weak var threeSixtyCountLabel: UILabel!
+    @IBOutlet weak var activityChart: LineChart!
     
     var company: Company?
     
@@ -46,6 +47,22 @@ class CompanyDetailViewController: UIViewController {
             thumbnail.layer.borderColor = UIColor.blackColor().CGColor
             
             thumbnail.tag = c.id!
+            
+            let data: [CGFloat] = [0, 0, 0, 0, 0, 0]
+            let data2: [CGFloat] = [0, 0, 0, 0, 0, 0]
+            
+            // simple line with custom x axis labels
+            let xLabels: [String] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+            
+            activityChart.animation.enabled = true
+            activityChart.area = true
+            activityChart.x.labels.visible = true
+            activityChart.x.grid.count = 5
+            activityChart.y.grid.count = 5
+            activityChart.x.labels.values = xLabels
+            activityChart.y.labels.visible = true
+            activityChart.addLine(data)
+            activityChart.addLine(data2)
         }
     }
 
