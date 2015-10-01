@@ -48,24 +48,45 @@ class CompanyDetailViewController: UIViewController {
             
             thumbnail.tag = c.order!
             
-            let data: [CGFloat] = [0, 0, 0, 0, 0, 0]
-            let data2: [CGFloat] = [0, 0, 0, 0, 0, 0]
+            let data: [CGFloat] = [0, 0, 0, 0, 0, 0, 0, 0]
+            let data2: [CGFloat] = [0, 0, 0, 0, 0, 0, 0, 0]
             
             // simple line with custom x axis labels
-            let xLabels: [String] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+            let xLabels: [String] = ["", "", "", "", "", "", "", ""]
             
             activityChart.animation.enabled = true
             activityChart.area = true
             activityChart.x.labels.visible = true
-            activityChart.x.grid.count = 5
-            activityChart.y.grid.count = 5
+            activityChart.x.grid.count = 8
+            activityChart.y.grid.count = 8
             activityChart.x.labels.values = xLabels
             activityChart.y.labels.visible = true
             activityChart.addLine(data)
             activityChart.addLine(data2)
+            
+            let dataService = DataService()
+            dataService.GetActivities(ReceivedActivityData, companyUuid: c.uuid!)
         }
     }
 
+    func ReceivedActivityData(activies: [Activity]?) -> Void {
+        dispatch_async(dispatch_get_main_queue()) {
+        let data = activies!.map{$0.stepCompleted!}
+        let data2 = activies!.map{$0.sequenceCompleted!}
+        let xLabels = activies!.map{$0.date!}
+        
+        self.activityChart.clearAll()
+        
+        self.activityChart.addLine(data)
+        self.activityChart.addLine(data2)
+        
+        self.activityChart.x.labels.values = xLabels
+        self.activityChart.hasGotData = true
+            
+        self.activityChart.setNeedsDisplay()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -126,6 +126,7 @@ public class LineChart: UIView {
     private var lineLayerStore: [CAShapeLayer] = []
     
     private var removeAll: Bool = false
+    public var hasGotData: Bool = false
     
     // category10 colors from d3 - https://github.com/mbostock/d3/wiki/Ordinal-Scales
     public var colors: [UIColor] = [
@@ -156,7 +157,7 @@ public class LineChart: UIView {
     
     override public func drawRect(rect: CGRect) {
         
-        if removeAll {
+        if removeAll  {
             let context = UIGraphicsGetCurrentContext()
             CGContextClearRect(context, rect)
             return
@@ -195,6 +196,7 @@ public class LineChart: UIView {
         if y.labels.visible { drawYLabels() }
         
         // draw lines
+        if hasGotData {
         for (lineIndex, _) in dataStore.enumerate() {
             
             drawLine(lineIndex)
@@ -205,6 +207,7 @@ public class LineChart: UIView {
             // draw area under line chart
             if area { drawAreaBeneathLineChart(lineIndex) }
             
+            }
         }
         
     }

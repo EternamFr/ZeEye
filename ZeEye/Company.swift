@@ -52,3 +52,15 @@ struct ProcessCount {
     let evaluationType: EvaluationType?
     let count: Int?
 }
+
+struct Activity : HasJsonInitializer {
+    let date: String? // "date":"24-09-2015",
+    let stepCompleted: CGFloat? // "stepCompleted": 39,
+    let sequenceCompleted: CGFloat? // "sequenceCompleted": 6
+    
+    init(json: [String:AnyObject], index: Int) {
+        date = json["date"] as? String
+        stepCompleted = json["stepCompleted"] as? CGFloat
+        sequenceCompleted = json["sequenceCompleted"] as? CGFloat
+    }
+}

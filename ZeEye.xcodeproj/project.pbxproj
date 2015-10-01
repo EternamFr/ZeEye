@@ -209,9 +209,9 @@
 		24DB57361A97D45A002FE93E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24446EF41BBDD5C5001E6C7C /* Activity.swift */,
 				24DB57371A97D466002FE93E /* Company.swift */,
 				24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */,
-				24446EF41BBDD5C5001E6C7C /* Activity.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
