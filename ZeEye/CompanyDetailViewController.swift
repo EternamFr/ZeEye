@@ -38,7 +38,7 @@ class CompanyDetailViewController: UIViewController {
             }
             
             // TODO: refactor to remove duplicate in ViewController + move that out of main thread/hard coded images
-            let path = NSBundle.mainBundle().pathForResource(c.thumbnail, ofType: "jpg")
+            let path = NSBundle.mainBundle().pathForResource(c.thumbnailUrl, ofType: "jpg")
             thumbnail.image = UIImage(named: path!)
             // change to 10.0 to have rounded rectangle
             thumbnail.layer.cornerRadius = 5.0 // thumbnail.frame.size.width / 2.0
@@ -46,7 +46,7 @@ class CompanyDetailViewController: UIViewController {
             thumbnail.layer.borderWidth = 1
             thumbnail.layer.borderColor = UIColor.blackColor().CGColor
             
-            thumbnail.tag = c.id!
+            thumbnail.tag = c.order!
             
             let data: [CGFloat] = [0, 0, 0, 0, 0, 0]
             let data2: [CGFloat] = [0, 0, 0, 0, 0, 0]

@@ -22,15 +22,15 @@ class CompanyServiceTests: XCTestCase {
     }
     
     func testExample() {
-        let companyService = CompanyService();
-        companyService.GetCompanies(Completion);
+        let dataService = DataService();
+        dataService.GetCompanies(Completion);
         
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
     }
     
     func Completion(companies: [Company]?) {
-        let c = companies;
+        let _ = companies;
     }
     
     func testPerformanceExample() {

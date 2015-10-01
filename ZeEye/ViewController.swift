@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet var tableView: UITableView!
     
-    private let companyService = CompanyService();
+    private let dataService = DataService();
     
     private var companies: [Company]?;
     private let textCellIdentifier = "CompanyCell"
@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.dateFormatter.timeStyle = NSDateFormatterStyle.LongStyle
         
         // request company data
-        self.companyService.GetCompanies(TestCompletion)
+        self.dataService.GetCompanies(TestCompletion)
     }
     
     func TestCompletion(companies: [Company]?) -> Void {
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func refresh(sender:AnyObject)
     {
-        self.companyService.GetCompanies(TestCompletion)
+        self.dataService.GetCompanies(TestCompletion)
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,7 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.subtitleLabel?.text = company.description
             cell.activeUsersLabel?.text = "\(company.activeUsers!)"
             
-            let path = NSBundle.mainBundle().pathForResource(company.thumbnail, ofType: "jpg")
+            let path = NSBundle.mainBundle().pathForResource(company.thumbnailUrl ?? "nuclear_clown", ofType: "jpg")
             cell.thumbnailImageView.image = UIImage(named: path!)
             // change to 10.0 to have rounded rectangle
             cell.thumbnailImageView.layer.cornerRadius = 5.0 // cell.thumbnailImageView.frame.size.width / 2.0
@@ -102,7 +102,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.thumbnailImageView.layer.borderWidth = 1
             cell.thumbnailImageView.layer.borderColor = UIColor.blackColor().CGColor
             
-            cell.thumbnailImageView.tag = company.id!
+            cell.thumbnailImageView.tag = company.order!
         }
         
         return cell

@@ -9,36 +9,42 @@
 // http://192.168.1.123/companies.json
 
 import Foundation
+import GameKit
 
-public struct Company {
-    let id: Int?
+struct Company : HasJsonInitializer {
+    let order: Int?
+    let uuid: String?
     let name: String?
     let description: String?
     let activeUsers: Int?
-    let thumbnail: String?
+    let thumbnailUrl: String?
     var musProcessesCount: Int?
     var threeSixtyProcessesCount: Int?
     
-    init(json: [String:AnyObject]) {
-        id = json["id"] as? Int
+    init(json: [String:AnyObject], index: Int) {
+        order = index
+        
+        uuid = json["uuid"] as? String
         name = json["name"] as? String
         description = json["description"] as? String
-        activeUsers = json["users"] as? Int
-        thumbnail = json["thumbnail"] as? String
+        activeUsers = json["activeUsers"] as? Int
+        thumbnailUrl = json["thumbnailUrl"] as? String
         
-        if let processes = json["processes"] as? [String:Int] {
-            for (key, value) in processes {
-                switch key {
-                case EvaluationType.mus.rawValue:
-                    musProcessesCount = value
-                case EvaluationType.threesixty.rawValue:
-                    threeSixtyProcessesCount = value
-                default:
-                    break
-                }
-            }
-        }
+        musProcessesCount = GKRandomSource.sharedRandom().nextIntWithUpperBound(1000)
+        threeSixtyProcessesCount = GKRandomSource.sharedRandom().nextIntWithUpperBound(1000)
         
+//        if let processes = json["processes"] as? [String:Int] {
+//            for (key, value) in processes {
+//                switch key {
+//                case EvaluationType.mus.rawValue:
+//                    musProcessesCount = value
+//                case EvaluationType.threesixty.rawValue:
+//                    threeSixtyProcessesCount = value
+//                default:
+//                    break
+//                }
+//            }
+//        }
     }
 }
 
