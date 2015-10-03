@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 David Christy. All rights reserved.
 //
 
-// http://192.168.1.123/companies.json
-
 import Foundation
 import GameKit
 
@@ -18,6 +16,7 @@ struct Company : HasJsonInitializer {
     let description: String?
     let activeUsers: Int?
     let thumbnailUrl: String?
+    var processesCount: [ProcessCount]?
     var musProcessesCount: Int?
     var threeSixtyProcessesCount: Int?
     
@@ -33,22 +32,37 @@ struct Company : HasJsonInitializer {
         musProcessesCount = GKRandomSource.sharedRandom().nextIntWithUpperBound(1000)
         threeSixtyProcessesCount = GKRandomSource.sharedRandom().nextIntWithUpperBound(1000)
         
-//        if let processes = json["processes"] as? [String:Int] {
-//            for (key, value) in processes {
-//                switch key {
-//                case EvaluationType.mus.rawValue:
-//                    musProcessesCount = value
-//                case EvaluationType.threesixty.rawValue:
-//                    threeSixtyProcessesCount = value
-//                default:
-//                    break
-//                }
-//            }
-//        }
+        if let processes = json["processesCounts"] as? NSArray {
+            processesCount = [ProcessCount]()
+            for (order, value) in processes.enumerate() {
+                if let entityDictionary = value as? [String:AnyObject] {
+                    let processCount = ProcessCount(json: entityDictionary, index: order + 1) // Tags have a default of 0... so can't be 0, hence the +1...
+                    processesCount!.append(processCount);
+                }
+            }
+        }
     }
 }
 
-public struct Activity : HasJsonInitializer {
+struct ProcessCount : HasJsonInitializer {
+    let evaluationTypeId: EvaluationType?
+    let count: Int?
+    let processTemplateName: String?
+    let processTemplateId: Int?
+    
+    init(json: [String:AnyObject], index: Int) {
+        evaluationTypeId = EvaluationType(rawValue:json["evaluationTypeId"] as? Int ?? 0)
+        processTemplateName = json["processTemplateName"] as? String
+        processTemplateId = json["processTemplateId"] as? Int
+        count = json["count"] as? Int
+    }
+//    "evaluationTypeId": 6,
+//    "processTemplateName": "HR Review 2014/2015",
+//    "count": 147,
+//    "processTemplateId": 2
+}
+
+struct Activity : HasJsonInitializer {
     let date: String?
     let stepCompleted: CGFloat?
     let sequenceCompleted: CGFloat?
@@ -58,9 +72,4 @@ public struct Activity : HasJsonInitializer {
         stepCompleted = json["stepCompleted"] as? CGFloat
         sequenceCompleted = json["sequenceCompleted"] as? CGFloat
     }
-}
-
-struct ProcessCount {
-    let evaluationType: EvaluationType?
-    let count: Int?
 }

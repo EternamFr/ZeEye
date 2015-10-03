@@ -8,7 +8,12 @@
 
 import Foundation
 
-public enum EvaluationType: String {
-    case mus = "mus"
-    case threesixty = "threesixty"
+public enum EvaluationType: Int {
+    case undefined = 0
+    case mus = 1
+    case threesixty = 2
+    case apv = 3
+    case projectevaluation = 4
+    case endevaluation = 5
+    case hrreview = 6
 }
