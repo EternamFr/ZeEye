@@ -25,6 +25,8 @@
 		24956AA51BBB310300CFCB2C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24956AA41BBB310300CFCB2C /* LineChart.swift */; };
 		24A84AD31BBFE2820019DC9C /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A84AD21BBFE2820019DC9C /* Activity.swift */; settings = {ASSET_TAGS = (); }; };
 		24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */; };
+		24D1F1A31BC13A1000022BEC /* ProcessCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D1F1A21BC13A1000022BEC /* ProcessCountView.xib */; settings = {ASSET_TAGS = (); }; };
+		24D1F1A51BC13CDA00022BEC /* ProcessCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F1A41BC13CDA00022BEC /* ProcessCountView.swift */; settings = {ASSET_TAGS = (); }; };
 		24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57161A97CDCE002FE93E /* AppDelegate.swift */; };
 		24DB571C1A97CDCE002FE93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571A1A97CDCE002FE93E /* Main.storyboard */; };
 		24DB571E1A97CDCE002FE93E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571D1A97CDCE002FE93E /* Images.xcassets */; };
@@ -65,6 +67,8 @@
 		24956AA41BBB310300CFCB2C /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		24A84AD21BBFE2820019DC9C /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
+		24D1F1A21BC13A1000022BEC /* ProcessCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProcessCountView.xib; sourceTree = "<group>"; };
+		24D1F1A41BC13CDA00022BEC /* ProcessCountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCountView.swift; sourceTree = "<group>"; };
 		24DB57111A97CDCE002FE93E /* ZeEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DB57151A97CDCE002FE93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DB57161A97CDCE002FE93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				24DB57361A97D45A002FE93E /* Model */,
 				24DB57161A97CDCE002FE93E /* AppDelegate.swift */,
 				24DB571A1A97CDCE002FE93E /* Main.storyboard */,
+				24D1F1A41BC13CDA00022BEC /* ProcessCountView.swift */,
+				24D1F1A21BC13A1000022BEC /* ProcessCountView.xib */,
 				24DB573B1A97E791002FE93E /* ViewController.swift */,
 				24DB571D1A97CDCE002FE93E /* Images.xcassets */,
 				24DB571F1A97CDCE002FE93E /* LaunchScreen.xib */,
@@ -326,6 +332,7 @@
 				24EB10AC1A9E1BA600039446 /* designit.jpg in Resources */,
 				24EB10AE1A9E1BA600039446 /* kammer.jpg in Resources */,
 				243F15281BBC751000950EDF /* kolding.jpg in Resources */,
+				24D1F1A31BC13A1000022BEC /* ProcessCountView.xib in Resources */,
 				24EB10AB1A9E1BA600039446 /* biomar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +361,7 @@
 				24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */,
 				243F152C1BBC93CD00950EDF /* EntityDecoder.swift in Sources */,
 				2435D6C71AD40F8800CC13E9 /* CustomNavigationAnimationController.swift in Sources */,
+				24D1F1A51BC13CDA00022BEC /* ProcessCountView.swift in Sources */,
 				245EA6931BA5833A008FF677 /* NetworkOperation.swift in Sources */,
 				245EA6951BA58ED6008FF677 /* DataService.swift in Sources */,
 			);
