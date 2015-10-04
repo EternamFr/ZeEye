@@ -40,6 +40,7 @@ struct Company : HasJsonInitializer {
                     processesCount!.append(processCount);
                 }
             }
+            print(processesCount?.count)
         }
     }
 }
