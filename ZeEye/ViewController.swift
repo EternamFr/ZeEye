@@ -23,6 +23,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     private let customNavigationAnimationController = CustomNavigationAnimationController()
 
+    private var defaultCompanyImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +41,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         self.dateFormatter.timeStyle = NSDateFormatterStyle.LongStyle
+        
+        // preload default CompanyImage
+        let path = NSBundle.mainBundle().pathForResource("titanic", ofType: "jpg")
+        defaultCompanyImage = UIImage(named: path!)!
         
         // request company data
         self.dataService.GetCompanies(TestCompletion)
@@ -94,8 +100,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.subtitleLabel?.text = company.description
             cell.activeUsersLabel?.text = "\(company.activeUsers!)"
             
-            let path = NSBundle.mainBundle().pathForResource(company.thumbnailUrl ?? "nuclear_clown", ofType: "jpg")
-            cell.thumbnailImageView.image = UIImage(named: path!)
+            if (company.thumbnailUrl?.isEmpty == false) {
+                let path = NSBundle.mainBundle().pathForResource(company.thumbnailUrl, ofType: "jpg")
+                cell.thumbnailImageView.image = UIImage(named: path!)
+            } else {
+                cell.thumbnailImageView.image = defaultCompanyImage
+            }
+
             // change to 10.0 to have rounded rectangle
             cell.thumbnailImageView.layer.cornerRadius = 5.0 // cell.thumbnailImageView.frame.size.width / 2.0
             cell.thumbnailImageView.clipsToBounds = true

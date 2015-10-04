@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2435D6C71AD40F8800CC13E9 /* CustomNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */; };
-		243F15221BBC723A00950EDF /* nuclear_clown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 243F15211BBC723A00950EDF /* nuclear_clown.jpg */; };
 		243F15241BBC737D00950EDF /* albank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 243F15231BBC737D00950EDF /* albank.jpg */; };
 		243F15261BBC74B800950EDF /* solar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 243F15251BBC74B800950EDF /* solar.jpg */; };
 		243F15281BBC751000950EDF /* kolding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 243F15271BBC751000950EDF /* kolding.jpg */; };
@@ -27,6 +26,7 @@
 		24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */; };
 		24D1F1A31BC13A1000022BEC /* ProcessCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D1F1A21BC13A1000022BEC /* ProcessCountView.xib */; settings = {ASSET_TAGS = (); }; };
 		24D1F1A51BC13CDA00022BEC /* ProcessCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F1A41BC13CDA00022BEC /* ProcessCountView.swift */; settings = {ASSET_TAGS = (); }; };
+		24D1F1A71BC184C800022BEC /* titanic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24D1F1A61BC184C800022BEC /* titanic.jpg */; settings = {ASSET_TAGS = (); }; };
 		24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57161A97CDCE002FE93E /* AppDelegate.swift */; };
 		24DB571C1A97CDCE002FE93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571A1A97CDCE002FE93E /* Main.storyboard */; };
 		24DB571E1A97CDCE002FE93E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571D1A97CDCE002FE93E /* Images.xcassets */; };
@@ -53,7 +53,6 @@
 
 /* Begin PBXFileReference section */
 		2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimationController.swift; sourceTree = "<group>"; };
-		243F15211BBC723A00950EDF /* nuclear_clown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nuclear_clown.jpg; sourceTree = "<group>"; };
 		243F15231BBC737D00950EDF /* albank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albank.jpg; sourceTree = "<group>"; };
 		243F15251BBC74B800950EDF /* solar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = solar.jpg; sourceTree = "<group>"; };
 		243F15271BBC751000950EDF /* kolding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kolding.jpg; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		24D1F1A21BC13A1000022BEC /* ProcessCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProcessCountView.xib; sourceTree = "<group>"; };
 		24D1F1A41BC13CDA00022BEC /* ProcessCountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCountView.swift; sourceTree = "<group>"; };
+		24D1F1A61BC184C800022BEC /* titanic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = titanic.jpg; sourceTree = "<group>"; };
 		24DB57111A97CDCE002FE93E /* ZeEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DB57151A97CDCE002FE93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DB57161A97CDCE002FE93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,11 +225,11 @@
 		24EB10AF1A9E1BB000039446 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				24D1F1A61BC184C800022BEC /* titanic.jpg */,
 				243F15291BBC814900950EDF /* verdo.jpg */,
 				243F15271BBC751000950EDF /* kolding.jpg */,
 				243F15251BBC74B800950EDF /* solar.jpg */,
 				243F15231BBC737D00950EDF /* albank.jpg */,
-				243F15211BBC723A00950EDF /* nuclear_clown.jpg */,
 				24EB10A71A9E1BA600039446 /* biomar.jpg */,
 				24EB10A81A9E1BA600039446 /* designit.jpg */,
 				24EB10A91A9E1BA600039446 /* djh.jpg */,
@@ -321,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D1F1A71BC184C800022BEC /* titanic.jpg in Resources */,
 				24EB10AD1A9E1BA600039446 /* djh.jpg in Resources */,
 				243F15261BBC74B800950EDF /* solar.jpg in Resources */,
 				24DB571C1A97CDCE002FE93E /* Main.storyboard in Resources */,
@@ -328,7 +329,6 @@
 				243F152A1BBC814900950EDF /* verdo.jpg in Resources */,
 				243F15241BBC737D00950EDF /* albank.jpg in Resources */,
 				24DB571E1A97CDCE002FE93E /* Images.xcassets in Resources */,
-				243F15221BBC723A00950EDF /* nuclear_clown.jpg in Resources */,
 				24EB10AC1A9E1BA600039446 /* designit.jpg in Resources */,
 				24EB10AE1A9E1BA600039446 /* kammer.jpg in Resources */,
 				243F15281BBC751000950EDF /* kolding.jpg in Resources */,

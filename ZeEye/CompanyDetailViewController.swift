@@ -39,11 +39,16 @@ class CompanyDetailViewController: UIViewController {
                     processCountStackView.addArrangedSubview(processCountView)
                 }
             }
-
             
             // TODO: refactor to remove duplicate in ViewController + move that out of main thread/hard coded images
-            let path = NSBundle.mainBundle().pathForResource(c.thumbnailUrl, ofType: "jpg")
-            thumbnail.image = UIImage(named: path!)
+            if (c.thumbnailUrl?.isEmpty == true) {
+                let path = NSBundle.mainBundle().pathForResource("titanic", ofType: "jpg")
+                thumbnail.image = UIImage(named: path!)
+            } else {
+                let path = NSBundle.mainBundle().pathForResource(c.thumbnailUrl, ofType: "jpg")
+                thumbnail.image = UIImage(named: path!)
+            }
+
             // change to 10.0 to have rounded rectangle
             thumbnail.layer.cornerRadius = 5.0 // thumbnail.frame.size.width / 2.0
             thumbnail.clipsToBounds = true
@@ -77,7 +82,7 @@ class CompanyDetailViewController: UIViewController {
         dispatch_async(dispatch_get_main_queue()) {
         let data = activies!.map{$0.stepCompleted!}
         let data2 = activies!.map{$0.sequenceCompleted!}
-        let xLabels = activies!.map{$0.date!}
+        let xLabels = activies!.map{"\($0.day!)/\($0.month!)"}
         
         self.activityChart.clearAll()
         

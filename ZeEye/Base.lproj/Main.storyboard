@@ -177,7 +177,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVM-7O-BW3">
-                                <rect key="frame" x="16" y="283" width="57" height="20"/>
+                                <rect key="frame" x="16" y="253" width="57" height="20"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Fj4-aG-xdE"/>
@@ -187,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DR-sZ-cpl" customClass="LineChart" customModule="ZeEye" customModuleProvider="target">
-                                <rect key="frame" x="16" y="311" width="568" height="272.5"/>
+                                <rect key="frame" x="24" y="273" width="552" height="310.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -225,10 +225,10 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v2l-gR-JWh">
-                                <rect key="frame" x="8" y="175" width="584" height="100"/>
+                                <rect key="frame" x="8" y="175" width="584" height="70"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="PQu-uN-WCq"/>
+                                    <constraint firstAttribute="height" constant="70" id="PQu-uN-WCq"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -236,7 +236,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jVM-7O-BW3" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="16" id="0W3-Pl-Y0I"/>
-                            <constraint firstAttribute="trailing" secondItem="5DR-sZ-cpl" secondAttribute="trailing" constant="16" id="6SV-Mx-9Nv"/>
+                            <constraint firstAttribute="trailing" secondItem="5DR-sZ-cpl" secondAttribute="trailing" constant="24" id="6SV-Mx-9Nv"/>
                             <constraint firstAttribute="trailing" secondItem="v2l-gR-JWh" secondAttribute="trailing" constant="8" id="8E7-ei-eAk"/>
                             <constraint firstItem="3iX-bK-s1s" firstAttribute="centerY" secondItem="EF7-IX-jAv" secondAttribute="centerY" id="8Fi-OI-MBD"/>
                             <constraint firstItem="PER-mc-4OI" firstAttribute="top" secondItem="5DR-sZ-cpl" secondAttribute="bottom" constant="16" id="Khb-t3-AZi"/>
@@ -246,10 +246,10 @@
                             <constraint firstItem="RGf-id-Lcd" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="16" id="b3M-zR-8uG"/>
                             <constraint firstItem="jVM-7O-BW3" firstAttribute="top" secondItem="v2l-gR-JWh" secondAttribute="bottom" constant="8" id="bUf-9P-uoo"/>
                             <constraint firstItem="RGf-id-Lcd" firstAttribute="top" secondItem="EF7-IX-jAv" secondAttribute="bottom" constant="8" id="ceI-y7-2BV"/>
-                            <constraint firstItem="5DR-sZ-cpl" firstAttribute="top" secondItem="jVM-7O-BW3" secondAttribute="bottom" constant="8" id="jcz-iQ-aR9"/>
+                            <constraint firstItem="5DR-sZ-cpl" firstAttribute="top" secondItem="jVM-7O-BW3" secondAttribute="bottom" id="jcz-iQ-aR9"/>
                             <constraint firstItem="v2l-gR-JWh" firstAttribute="top" secondItem="RGf-id-Lcd" secondAttribute="bottom" constant="8" id="jvC-TQ-VLz"/>
                             <constraint firstItem="EF7-IX-jAv" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="8" id="mPm-zf-n8E"/>
-                            <constraint firstItem="5DR-sZ-cpl" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="16" id="qrg-Ya-aLI"/>
+                            <constraint firstItem="5DR-sZ-cpl" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="24" id="qrg-Ya-aLI"/>
                             <constraint firstItem="5DR-sZ-cpl" firstAttribute="centerX" secondItem="809-IR-8dy" secondAttribute="centerX" id="rXH-in-3Nu"/>
                             <constraint firstAttribute="trailing" secondItem="3iX-bK-s1s" secondAttribute="trailing" constant="16" id="uRX-dt-n4O"/>
                             <constraint firstItem="v2l-gR-JWh" firstAttribute="leading" secondItem="809-IR-8dy" secondAttribute="leading" constant="8" id="xKL-Bl-SgG"/>
