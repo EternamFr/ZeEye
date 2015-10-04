@@ -13,10 +13,8 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var activeUsersLabel: UILabel!
-    @IBOutlet weak var musCountLabel: UILabel!
-    @IBOutlet weak var threeSixtyCountLabel: UILabel!
     @IBOutlet weak var activityChart: LineChart!
+    @IBOutlet weak var processCountStackView: UIStackView!
     
     var company: Company?
     
@@ -27,15 +25,21 @@ class CompanyDetailViewController: UIViewController {
         if let c = company {
             titleLabel.text = c.name
             subtitleLabel.text = c.description
-            activeUsersLabel.text = "\(c.activeUsers!)"
             
-            if let musCount = c.musProcessesCount {
-                musCountLabel.text = "\(musCount)"
-            }
+            let usersCountView = ProcessCountView(frame: CGRectMake(0,0,150,65))
+            usersCountView.lblProcessCountText = "\(c.activeUsers!)"
+            usersCountView.lblProcessTitleText = "users"
+            processCountStackView.addArrangedSubview(usersCountView)
             
-            if let threeSixtyCount = c.threeSixtyProcessesCount {
-                threeSixtyCountLabel.text = "\(threeSixtyCount)"
+            if let processes = c.processesCount {
+                for (_, value) in processes.enumerate() {
+                    let processCountView = ProcessCountView(frame: CGRectMake(0,0,150,65))
+                    processCountView.lblProcessCountText = "\(value.count!)"
+                    processCountView.lblProcessTitleText = value.processTemplateName
+                    processCountStackView.addArrangedSubview(processCountView)
+                }
             }
+
             
             // TODO: refactor to remove duplicate in ViewController + move that out of main thread/hard coded images
             let path = NSBundle.mainBundle().pathForResource(c.thumbnailUrl, ofType: "jpg")
