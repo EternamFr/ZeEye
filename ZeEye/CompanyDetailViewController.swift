@@ -16,6 +16,10 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var activityChart: LineChart!
     @IBOutlet weak var processCountStackView: UIStackView!
     
+    private var CanRequestMoreActivityData: Bool = false
+    private var ActivityDataTodayOffset: Int = 0
+    private let ActivityDataDaysSpan: Int = 8
+    
     var company: Company?
     
     override func viewDidLoad() {
@@ -73,11 +77,44 @@ class CompanyDetailViewController: UIViewController {
             activityChart.addLine(data)
             activityChart.addLine(data2)
             
+            // Swipes
+            let swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+            swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+            self.view.addGestureRecognizer(swipeRight)
+            
+            let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+            swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+            self.view.addGestureRecognizer(swipeLeft)
+            
+            // Get data
             let dataService = DataService()
-            dataService.GetActivities(ReceivedActivityData, companyUuid: c.uuid!)
+            CanRequestMoreActivityData = false;
+            dataService.GetActivities(ReceivedActivityData, companyUuid: c.uuid!, todayOffset: ActivityDataTodayOffset)
         }
     }
 
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            if CanRequestMoreActivityData == true {
+                CanRequestMoreActivityData = false;
+                
+                switch swipeGesture.direction {
+                case UISwipeGestureRecognizerDirection.Right:
+                    print("Swiped right")
+                    ActivityDataTodayOffset += 8
+                case UISwipeGestureRecognizerDirection.Left:
+                    print("Swiped left")
+                    ActivityDataTodayOffset = max(0, ActivityDataTodayOffset - 8)
+                default:
+                    break
+                }
+                let dataService = DataService()
+                dataService.GetActivities(ReceivedActivityData, companyUuid: company!.uuid!, todayOffset: ActivityDataTodayOffset)
+            }
+        }
+    }
+    
     func ReceivedActivityData(activies: [Activity]?) -> Void {
         dispatch_async(dispatch_get_main_queue()) {
         let data = activies!.map{$0.stepCompleted!}
@@ -93,6 +130,7 @@ class CompanyDetailViewController: UIViewController {
         self.activityChart.hasGotData = true
             
         self.activityChart.setNeedsDisplay()
+        self.CanRequestMoreActivityData = true
         }
     }
     

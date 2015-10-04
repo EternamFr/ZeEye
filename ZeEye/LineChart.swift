@@ -191,22 +191,20 @@ public class LineChart: UIView {
         // draw axes
         if x.axis.visible && y.axis.visible { drawAxes() }
         
-        // draw labels
-        if x.labels.visible { drawXLabels() }
-        if y.labels.visible { drawYLabels() }
-        
         // draw lines
         if hasGotData {
-        for (lineIndex, _) in dataStore.enumerate() {
+            // draw labels
+            if x.labels.visible { drawXLabels() }
+            if y.labels.visible { drawYLabels() }
             
-            drawLine(lineIndex)
+            for (lineIndex, _) in dataStore.enumerate() {
+                drawLine(lineIndex)
             
-            // draw dots
-            if dots.visible { drawDataDots(lineIndex) }
+                // draw dots
+                if dots.visible { drawDataDots(lineIndex) }
             
-            // draw area under line chart
-            if area { drawAreaBeneathLineChart(lineIndex) }
-            
+                // draw area under line chart
+                if area { drawAreaBeneathLineChart(lineIndex) }
             }
         }
         

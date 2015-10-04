@@ -49,7 +49,7 @@ struct DataService {
         self.GetEntities("https://stories.xafir.com/api/v1/companies", key: "companies", completion: completion)
     }
     
-    func GetActivities(completion: ([Activity]?->Void), companyUuid: String) {
-        self.GetEntities("https://stories.xafir.com/api/v1/companies/\(companyUuid)/activities", key: "activities", completion: completion)
+    func GetActivities(completion: ([Activity]?->Void), companyUuid: String, todayOffset: Int) {
+        self.GetEntities("https://stories.xafir.com/api/v1/companies/\(companyUuid)/activities?todayoffset=\(todayOffset)", key: "activities", completion: completion)
     }
 }
