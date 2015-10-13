@@ -9,7 +9,11 @@
 import UIKit
 
 class CompanyDetailViewController: UIViewController {
-
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -21,6 +25,7 @@ class CompanyDetailViewController: UIViewController {
     private let ActivityDataDaysSpan: Int = 8
     
     var company: Company?
+    var requestedProcessTemplateId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +35,14 @@ class CompanyDetailViewController: UIViewController {
             titleLabel.text = c.name
             subtitleLabel.text = c.description
             
-            let usersCountView = ProcessCountView(frame: CGRectMake(0,0,150,65))
+            let usersCountView = ProcessCountView(frame: CGRectMake(0,0,150,65), processTemplateId: nil, tapDelegate: nil)
             usersCountView.lblProcessCountText = "\(c.activeUsers!)"
             usersCountView.lblProcessTitleText = "users"
             processCountStackView.addArrangedSubview(usersCountView)
             
             if let processes = c.processesCount {
                 for (_, value) in processes.enumerate() {
-                    let processCountView = ProcessCountView(frame: CGRectMake(0,0,150,65))
+                    let processCountView = ProcessCountView(frame: CGRectMake(0,0,150,65), processTemplateId: value.processTemplateId, tapDelegate: processCountTapped)
                     processCountView.lblProcessCountText = "\(value.count!)"
                     processCountView.lblProcessTitleText = value.processTemplateName
                     processCountStackView.addArrangedSubview(processCountView)
@@ -89,33 +94,30 @@ class CompanyDetailViewController: UIViewController {
             // Get data
             let dataService = DataService()
             CanRequestMoreActivityData = false;
-            dataService.GetActivities(ReceivedActivityData, companyUuid: c.uuid!, todayOffset: ActivityDataTodayOffset)
+            dataService.GetActivities(receivedActivityData, companyUuid: c.uuid!, todayOffset: ActivityDataTodayOffset)
         }
     }
 
-    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
-        
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {        
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             if CanRequestMoreActivityData == true {
                 CanRequestMoreActivityData = false;
                 
                 switch swipeGesture.direction {
                 case UISwipeGestureRecognizerDirection.Right:
-                    print("Swiped right")
                     ActivityDataTodayOffset += 8
                 case UISwipeGestureRecognizerDirection.Left:
-                    print("Swiped left")
                     ActivityDataTodayOffset = max(0, ActivityDataTodayOffset - 8)
                 default:
                     break
                 }
                 let dataService = DataService()
-                dataService.GetActivities(ReceivedActivityData, companyUuid: company!.uuid!, todayOffset: ActivityDataTodayOffset)
+                dataService.GetActivities(receivedActivityData, companyUuid: company!.uuid!, todayOffset: ActivityDataTodayOffset)
             }
         }
     }
     
-    func ReceivedActivityData(activies: [Activity]?) -> Void {
+    func receivedActivityData(activies: [Activity]?) -> Void {
         dispatch_async(dispatch_get_main_queue()) {
         let data = activies!.map{$0.stepCompleted!}
         let data2 = activies!.map{$0.sequenceCompleted!}
@@ -134,9 +136,22 @@ class CompanyDetailViewController: UIViewController {
         }
     }
     
+    func processCountTapped(processTemplateId: Int) -> Void {
+        requestedProcessTemplateId = processTemplateId
+        self.performSegueWithIdentifier("ShowProcessDetail", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let processDetailControler = segue.destinationViewController as! ProcessDetailViewController
+        
+        let request = SequenceDetailsRequest(companyUuid: company!.uuid!, processTemplateId: requestedProcessTemplateId!)
+        processDetailControler.sequenceDetailsRequest = request
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }

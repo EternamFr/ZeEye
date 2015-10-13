@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NqJ-rQ-bgL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NqJ-rQ-bgL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -262,11 +263,110 @@
                         <outlet property="subtitleLabel" destination="RGf-id-Lcd" id="7nh-1r-wtd"/>
                         <outlet property="thumbnail" destination="EF7-IX-jAv" id="A7U-Uc-gah"/>
                         <outlet property="titleLabel" destination="3iX-bK-s1s" id="86O-PO-P3s"/>
+                        <segue destination="0u5-Cg-r9Q" kind="presentation" identifier="ShowProcessDetail" id="xyj-PN-k6M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqi-qW-Y9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="11"/>
+        </scene>
+        <!--Process Detail View Controller-->
+        <scene sceneID="M1O-MQ-r96">
+            <objects>
+                <viewController id="0u5-Cg-r9Q" customClass="ProcessDetailViewController" customModule="ZeEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RWx-wc-Oox"/>
+                        <viewControllerLayoutGuide type="bottom" id="vTk-Uw-LKq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Llo-3e-pwW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="28" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jrd-cR-vKa">
+                                <rect key="frame" x="8" y="336" width="584" height="256"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SequenceCell" id="P5s-go-OEF" customClass="SequenceTableViewCell" customModule="ZeEye" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="584" height="28"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P5s-go-OEF" id="b15-NY-OVJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="584" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ4-DL-eAC">
+                                                    <rect key="frame" x="40" y="3" width="46.5" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view tag="666666" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0O-Kt-uSD">
+                                                    <rect key="frame" x="16" y="6" width="16" height="16"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="97d-SZ-kbg"/>
+                                                        <constraint firstAttribute="width" constant="16" id="maN-Mu-ZZr"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SequenceName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSR-D5-9Qf">
+                                                    <rect key="frame" x="480" y="6" width="95.5" height="16"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="hSR-D5-9Qf" firstAttribute="centerY" secondItem="ZZ4-DL-eAC" secondAttribute="centerY" id="0gk-Zr-Hd9"/>
+                                                <constraint firstItem="hSR-D5-9Qf" firstAttribute="leading" secondItem="ZZ4-DL-eAC" secondAttribute="trailing" priority="750" constant="32" id="CEl-Tp-VJp"/>
+                                                <constraint firstItem="ZZ4-DL-eAC" firstAttribute="centerY" secondItem="b15-NY-OVJ" secondAttribute="centerY" id="Du7-XT-M1P"/>
+                                                <constraint firstItem="hSR-D5-9Qf" firstAttribute="centerY" secondItem="b15-NY-OVJ" secondAttribute="centerY" id="K9V-ky-2nE"/>
+                                                <constraint firstAttribute="trailing" secondItem="hSR-D5-9Qf" secondAttribute="trailing" constant="8" id="MCA-rX-JnM"/>
+                                                <constraint firstItem="T0O-Kt-uSD" firstAttribute="trailing" secondItem="ZZ4-DL-eAC" secondAttribute="leading" constant="-8" id="das-Si-xyk"/>
+                                                <constraint firstItem="T0O-Kt-uSD" firstAttribute="leading" secondItem="b15-NY-OVJ" secondAttribute="leading" constant="16" id="f6J-ab-QKc"/>
+                                                <constraint firstItem="T0O-Kt-uSD" firstAttribute="centerY" secondItem="b15-NY-OVJ" secondAttribute="centerY" id="w2V-Pt-KEJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="colorView" destination="T0O-Kt-uSD" id="NNw-33-SS8"/>
+                                            <outlet property="count" destination="ZZ4-DL-eAC" id="Kfc-vr-Hfm"/>
+                                            <outlet property="sequenceName" destination="hSR-D5-9Qf" id="rhv-yp-evQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyh-nM-900" customClass="DiscChart" customModule="ZeEye" customModuleProvider="target">
+                                <rect key="frame" x="28" y="28" width="544" height="300"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Jrd-cR-vKa" secondAttribute="trailing" constant="8" id="cmE-SH-Pqy"/>
+                            <constraint firstItem="Hyh-nM-900" firstAttribute="leading" secondItem="Llo-3e-pwW" secondAttribute="leadingMargin" constant="8" id="frd-fM-3zT"/>
+                            <constraint firstItem="Jrd-cR-vKa" firstAttribute="top" secondItem="Hyh-nM-900" secondAttribute="bottom" constant="8" id="hdF-GK-Yzt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hyh-nM-900" secondAttribute="trailing" constant="8" id="l7Q-wc-le2"/>
+                            <constraint firstItem="Jrd-cR-vKa" firstAttribute="leading" secondItem="Llo-3e-pwW" secondAttribute="leading" constant="8" id="lgG-wI-OOk"/>
+                            <constraint firstItem="vTk-Uw-LKq" firstAttribute="top" secondItem="Jrd-cR-vKa" secondAttribute="bottom" constant="8" id="nK7-3J-Ulo"/>
+                            <constraint firstItem="Hyh-nM-900" firstAttribute="height" secondItem="Llo-3e-pwW" secondAttribute="height" multiplier="1:2" id="nRs-6H-mD3"/>
+                            <constraint firstItem="Hyh-nM-900" firstAttribute="top" secondItem="RWx-wc-Oox" secondAttribute="bottom" constant="8" id="wRc-zt-VY1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="discChart" destination="Hyh-nM-900" id="fxC-Jt-LD0"/>
+                        <outlet property="tableView" destination="Jrd-cR-vKa" id="Zey-4j-Pp8"/>
+                        <segue destination="cv9-Qh-g3V" kind="unwind" identifier="UnwindProcessDetail" unwindAction="myUnwindAction:" id="0Ne-U5-ZUE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FmV-Ye-8ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cv9-Qh-g3V" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="786"/>
         </scene>
     </scenes>
 </document>

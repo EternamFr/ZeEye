@@ -10,7 +10,10 @@ import UIKit
 
 @IBDesignable class ProcessCountView: UIView {
 
+    let processTemplateId: Int?
+    
     var view:UIView!;
+    let tapDelegate: ((Int) -> Void)?
     
     @IBOutlet weak var lblProcessCount: UILabel!
     @IBOutlet weak var lblProcessTitle: UILabel!
@@ -37,12 +40,17 @@ import UIKit
         }
     }
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, processTemplateId: Int?, tapDelegate: ((Int) -> Void)?) {
+        self.processTemplateId = processTemplateId
+        self.tapDelegate = tapDelegate
         super.init(frame: frame)
+        
         loadViewFromNib ()
     }
     
     required init?(coder aDecoder: NSCoder) {
+        self.processTemplateId = nil
+        self.tapDelegate = nil
         super.init(coder: aDecoder)
         loadViewFromNib ()
     }
@@ -56,4 +64,9 @@ import UIKit
         self.addSubview(view);
     }
 
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let delegate = tapDelegate, id = processTemplateId {
+            delegate(id)
+        }
+    }
 }

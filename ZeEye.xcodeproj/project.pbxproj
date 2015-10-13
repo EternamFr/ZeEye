@@ -17,8 +17,23 @@
 		245EA6951BA58ED6008FF677 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6941BA58ED6008FF677 /* DataService.swift */; };
 		245EA6981BA59F84008FF677 /* CompanyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6971BA59F84008FF677 /* CompanyServiceTests.swift */; };
 		245EA6991BA5A09F008FF677 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6941BA58ED6008FF677 /* DataService.swift */; };
-		245EA69A1BA5A1B6008FF677 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57371A97D466002FE93E /* Company.swift */; };
 		245EA69B1BA5A31C008FF677 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EA6921BA5833A008FF677 /* NetworkOperation.swift */; };
+		2461D1F21BCA6227004EFDCF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461D1F11BCA6227004EFDCF /* Protocols.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D1FA1BCA64A5004EFDCF /* ProcessCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461D1F91BCA64A5004EFDCF /* ProcessCount.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D1FC1BCA64CF004EFDCF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461D1FB1BCA64CF004EFDCF /* Company.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D1FD1BCA664C004EFDCF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461D1FB1BCA64CF004EFDCF /* Company.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D1FE1BCA6664004EFDCF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461D1F11BCA6227004EFDCF /* Protocols.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D1FF1BCA666D004EFDCF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A84AD21BBFE2820019DC9C /* Activity.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2001BCA6672004EFDCF /* SequenceCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F8E2E11BC6FF130072A3A9 /* SequenceCount.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2021BCA667B004EFDCF /* ProcessCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461D1F91BCA64A5004EFDCF /* ProcessCount.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2031BCA66EC004EFDCF /* ProcessCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F1A41BC13CDA00022BEC /* ProcessCountView.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2041BCA66F6004EFDCF /* EntityDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F152B1BBC93CD00950EDF /* EntityDecoder.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2051BCA66FE004EFDCF /* DiscChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F8E2E51BC705620072A3A9 /* DiscChart.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2061BCA6702004EFDCF /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24956AA41BBB310300CFCB2C /* LineChart.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2071BCA9DA9004EFDCF /* ProcessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F8E2E31BC702B30072A3A9 /* ProcessDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2081BCA9DB0004EFDCF /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D2091BCA9DB4004EFDCF /* CustomNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */; settings = {ASSET_TAGS = (); }; };
+		2461D20B1BCAB453004EFDCF /* RadialGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461D20A1BCAB453004EFDCF /* RadialGraph.swift */; settings = {ASSET_TAGS = (); }; };
 		24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */; };
 		24668E5E1BAB589100BAFFF9 /* EvaluationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */; };
 		24956AA51BBB310300CFCB2C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24956AA41BBB310300CFCB2C /* LineChart.swift */; };
@@ -32,12 +47,19 @@
 		24DB571E1A97CDCE002FE93E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571D1A97CDCE002FE93E /* Images.xcassets */; };
 		24DB57211A97CDCE002FE93E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DB571F1A97CDCE002FE93E /* LaunchScreen.xib */; };
 		24DB572D1A97CDCE002FE93E /* ZeEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB572C1A97CDCE002FE93E /* ZeEyeTests.swift */; };
-		24DB57381A97D466002FE93E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB57371A97D466002FE93E /* Company.swift */; };
 		24DB573C1A97E791002FE93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB573B1A97E791002FE93E /* ViewController.swift */; };
+		24DE0DEF1BCC3195006FBB64 /* SequenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE0DEE1BCC3195006FBB64 /* SequenceTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		24DE0DF01BCC3277006FBB64 /* SequenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE0DEE1BCC3195006FBB64 /* SequenceTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		24DE0DF11BCC327C006FBB64 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		24E4056C1BCDA03400CB5DA5 /* SequenceDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4056B1BCDA03400CB5DA5 /* SequenceDetailsRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		24E4056D1BCDA03400CB5DA5 /* SequenceDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4056B1BCDA03400CB5DA5 /* SequenceDetailsRequest.swift */; settings = {ASSET_TAGS = (); }; };
 		24EB10AB1A9E1BA600039446 /* biomar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EB10A71A9E1BA600039446 /* biomar.jpg */; };
 		24EB10AC1A9E1BA600039446 /* designit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EB10A81A9E1BA600039446 /* designit.jpg */; };
 		24EB10AD1A9E1BA600039446 /* djh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EB10A91A9E1BA600039446 /* djh.jpg */; };
 		24EB10AE1A9E1BA600039446 /* kammer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EB10AA1A9E1BA600039446 /* kammer.jpg */; };
+		24F8E2E21BC6FF130072A3A9 /* SequenceCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F8E2E11BC6FF130072A3A9 /* SequenceCount.swift */; settings = {ASSET_TAGS = (); }; };
+		24F8E2E41BC702B30072A3A9 /* ProcessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F8E2E31BC702B30072A3A9 /* ProcessDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		24F8E2E61BC705620072A3A9 /* DiscChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F8E2E51BC705620072A3A9 /* DiscChart.swift */; settings = {ASSET_TAGS = (); }; };
 		24FFD2BE1BB061A9000DFF17 /* EvaluationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +83,10 @@
 		245EA6921BA5833A008FF677 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		245EA6941BA58ED6008FF677 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		245EA6971BA59F84008FF677 /* CompanyServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyServiceTests.swift; sourceTree = "<group>"; };
+		2461D1F11BCA6227004EFDCF /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		2461D1F91BCA64A5004EFDCF /* ProcessCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCount.swift; sourceTree = "<group>"; };
+		2461D1FB1BCA64CF004EFDCF /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		2461D20A1BCAB453004EFDCF /* RadialGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGraph.swift; sourceTree = "<group>"; };
 		24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationType.swift; sourceTree = "<group>"; };
 		24956AA41BBB310300CFCB2C /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
@@ -78,12 +104,16 @@
 		24DB57261A97CDCE002FE93E /* ZeEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DB572B1A97CDCE002FE93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DB572C1A97CDCE002FE93E /* ZeEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeEyeTests.swift; sourceTree = "<group>"; };
-		24DB57371A97D466002FE93E /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		24DB573B1A97E791002FE93E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24DE0DEE1BCC3195006FBB64 /* SequenceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceTableViewCell.swift; sourceTree = "<group>"; };
+		24E4056B1BCDA03400CB5DA5 /* SequenceDetailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceDetailsRequest.swift; sourceTree = "<group>"; };
 		24EB10A71A9E1BA600039446 /* biomar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biomar.jpg; sourceTree = "<group>"; };
 		24EB10A81A9E1BA600039446 /* designit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = designit.jpg; sourceTree = "<group>"; };
 		24EB10A91A9E1BA600039446 /* djh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = djh.jpg; sourceTree = "<group>"; };
 		24EB10AA1A9E1BA600039446 /* kammer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kammer.jpg; sourceTree = "<group>"; };
+		24F8E2E11BC6FF130072A3A9 /* SequenceCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceCount.swift; sourceTree = "<group>"; };
+		24F8E2E31BC702B30072A3A9 /* ProcessDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessDetailViewController.swift; sourceTree = "<group>"; };
+		24F8E2E51BC705620072A3A9 /* DiscChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				24956AA41BBB310300CFCB2C /* LineChart.swift */,
+				24F8E2E51BC705620072A3A9 /* DiscChart.swift */,
+				2461D20A1BCAB453004EFDCF /* RadialGraph.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -130,10 +162,20 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		2461D1F01BCA6204004EFDCF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2461D1F11BCA6227004EFDCF /* Protocols.swift */,
+			);
+			name = Protocols;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		24660F2C1A9DFD5000D383A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				24660F2A1A9DFD3700D383A5 /* CompanyTableViewCell.swift */,
+				24DE0DEE1BCC3195006FBB64 /* SequenceTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -142,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				24AE7D891A9FD6AE003346D4 /* CompanyDetailViewController.swift */,
+				24F8E2E31BC702B30072A3A9 /* ProcessDetailViewController.swift */,
 				2435D6C61AD40F8800CC13E9 /* CustomNavigationAnimationController.swift */,
 			);
 			name = Controllers;
@@ -168,6 +211,8 @@
 		24DB57131A97CDCE002FE93E /* ZeEye */ = {
 			isa = PBXGroup;
 			children = (
+				24E4056A1BCDA01100CB5DA5 /* Requests */,
+				2461D1F01BCA6204004EFDCF /* Protocols */,
 				243D887B1BB87D8600E1B554 /* Utilities */,
 				245EA6911BA5831E008FF677 /* Services */,
 				24AE7D881A9FD690003346D4 /* Controllers */,
@@ -215,11 +260,21 @@
 		24DB57361A97D45A002FE93E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				24DB57371A97D466002FE93E /* Company.swift */,
+				2461D1FB1BCA64CF004EFDCF /* Company.swift */,
 				24668E5D1BAB589100BAFFF9 /* EvaluationType.swift */,
 				24A84AD21BBFE2820019DC9C /* Activity.swift */,
+				24F8E2E11BC6FF130072A3A9 /* SequenceCount.swift */,
+				2461D1F91BCA64A5004EFDCF /* ProcessCount.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		24E4056A1BCDA01100CB5DA5 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				24E4056B1BCDA03400CB5DA5 /* SequenceDetailsRequest.swift */,
+			);
+			name = Requests;
 			sourceTree = "<group>";
 		};
 		24EB10AF1A9E1BB000039446 /* Images */ = {
@@ -352,17 +407,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DB57171A97CDCE002FE93E /* AppDelegate.swift in Sources */,
+				24F8E2E41BC702B30072A3A9 /* ProcessDetailViewController.swift in Sources */,
 				24668E5E1BAB589100BAFFF9 /* EvaluationType.swift in Sources */,
+				2461D1FC1BCA64CF004EFDCF /* Company.swift in Sources */,
 				24AE7D8A1A9FD6AE003346D4 /* CompanyDetailViewController.swift in Sources */,
-				24DB57381A97D466002FE93E /* Company.swift in Sources */,
+				2461D1FA1BCA64A5004EFDCF /* ProcessCount.swift in Sources */,
+				24F8E2E21BC6FF130072A3A9 /* SequenceCount.swift in Sources */,
+				24F8E2E61BC705620072A3A9 /* DiscChart.swift in Sources */,
 				24956AA51BBB310300CFCB2C /* LineChart.swift in Sources */,
 				24DB573C1A97E791002FE93E /* ViewController.swift in Sources */,
+				24DE0DEF1BCC3195006FBB64 /* SequenceTableViewCell.swift in Sources */,
+				24E4056C1BCDA03400CB5DA5 /* SequenceDetailsRequest.swift in Sources */,
 				24A84AD31BBFE2820019DC9C /* Activity.swift in Sources */,
+				2461D20B1BCAB453004EFDCF /* RadialGraph.swift in Sources */,
 				24660F2B1A9DFD3700D383A5 /* CompanyTableViewCell.swift in Sources */,
 				243F152C1BBC93CD00950EDF /* EntityDecoder.swift in Sources */,
 				2435D6C71AD40F8800CC13E9 /* CustomNavigationAnimationController.swift in Sources */,
 				24D1F1A51BC13CDA00022BEC /* ProcessCountView.swift in Sources */,
 				245EA6931BA5833A008FF677 /* NetworkOperation.swift in Sources */,
+				2461D1F21BCA6227004EFDCF /* Protocols.swift in Sources */,
 				245EA6951BA58ED6008FF677 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,11 +435,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DB572D1A97CDCE002FE93E /* ZeEyeTests.swift in Sources */,
+				2461D2071BCA9DA9004EFDCF /* ProcessDetailViewController.swift in Sources */,
+				2461D2041BCA66F6004EFDCF /* EntityDecoder.swift in Sources */,
 				24FFD2BE1BB061A9000DFF17 /* EvaluationType.swift in Sources */,
+				2461D2091BCA9DB4004EFDCF /* CustomNavigationAnimationController.swift in Sources */,
+				2461D2031BCA66EC004EFDCF /* ProcessCountView.swift in Sources */,
+				24DE0DF11BCC327C006FBB64 /* CompanyTableViewCell.swift in Sources */,
+				2461D2061BCA6702004EFDCF /* LineChart.swift in Sources */,
+				2461D1FE1BCA6664004EFDCF /* Protocols.swift in Sources */,
+				24DE0DF01BCC3277006FBB64 /* SequenceTableViewCell.swift in Sources */,
+				2461D2021BCA667B004EFDCF /* ProcessCount.swift in Sources */,
+				24E4056D1BCDA03400CB5DA5 /* SequenceDetailsRequest.swift in Sources */,
 				245EA6991BA5A09F008FF677 /* DataService.swift in Sources */,
 				245EA69B1BA5A31C008FF677 /* NetworkOperation.swift in Sources */,
 				245EA6981BA59F84008FF677 /* CompanyServiceTests.swift in Sources */,
-				245EA69A1BA5A1B6008FF677 /* Company.swift in Sources */,
+				2461D2001BCA6672004EFDCF /* SequenceCount.swift in Sources */,
+				2461D1FF1BCA666D004EFDCF /* Activity.swift in Sources */,
+				2461D2051BCA66FE004EFDCF /* DiscChart.swift in Sources */,
+				2461D1FD1BCA664C004EFDCF /* Company.swift in Sources */,
+				2461D2081BCA9DB0004EFDCF /* CompanyDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +504,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Christy (S82Z7X32LG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Christy (S82Z7X32LG)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -472,7 +550,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Christy (S82Z7X32LG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Christy (S82Z7X32LG)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -496,11 +575,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ZeEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZeFrog.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -508,11 +589,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ZeEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZeFrog.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

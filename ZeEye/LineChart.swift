@@ -235,16 +235,17 @@ public class LineChart: UIView {
     * Handle touch events.
     */
     private func handleTouchEvents(touches: NSSet!, event: UIEvent) {
-        if (self.dataStore.isEmpty) {
-            return
-        }
-        let point: AnyObject! = touches.anyObject()
-        let xValue = point.locationInView(self).x
-        let inverted = self.x.invert(xValue - x.axis.inset)
-        let rounded = Int(round(Double(inverted)))
-        let yValues: [CGFloat] = getYValuesForXValue(rounded)
-        highlightDataPoints(rounded)
-        delegate?.didSelectDataPoint(CGFloat(rounded), yValues: yValues)
+        return // "Disable" touch events
+//        if (self.dataStore.isEmpty) {
+//            return
+//        }
+//        let point: AnyObject! = touches.anyObject()
+//        let xValue = point.locationInView(self).x
+//        let inverted = self.x.invert(xValue - x.axis.inset)
+//        let rounded = Int(round(Double(inverted)))
+//        let yValues: [CGFloat] = getYValuesForXValue(rounded)
+//        highlightDataPoints(rounded)
+//        delegate?.didSelectDataPoint(CGFloat(rounded), yValues: yValues)
     }
     
     
@@ -508,6 +509,8 @@ public class LineChart: UIView {
         let (_, _, step) = x.linear.ticks(xAxisData.count)
         let width = x.scale(step)
         
+        var stackingDuration = 1.0
+        
         var text: String
         for (index, _) in xAxisData.enumerate() {
             let xValue = self.x.scale(CGFloat(index)) + x.axis.inset - (width / 2)
@@ -521,6 +524,16 @@ public class LineChart: UIView {
             }
             label.text = text
             self.addSubview(label)
+            
+            if animation.enabled {
+                let anim = CABasicAnimation(keyPath: "opacity")
+                anim.duration = stackingDuration
+                anim.fromValue = 0
+                anim.toValue = 1
+                label.layer.addAnimation(anim, forKey: "opacity")
+                
+                stackingDuration += 0.15
+            }
         }
     }
     
@@ -532,6 +545,9 @@ public class LineChart: UIView {
     private func drawYLabels() {
         var yValue: CGFloat
         let (start, stop, step) = self.y.ticks
+        
+        var stackingDuration = 1.0
+        
         for var i: CGFloat = start; i <= stop; i += step {
             yValue = self.bounds.height - self.y.scale(i) - (y.axis.inset * 1.5)
             let label = UILabel(frame: CGRect(x: 0, y: yValue, width: y.axis.inset, height: y.axis.inset))
@@ -539,6 +555,16 @@ public class LineChart: UIView {
             label.textAlignment = .Center
             label.text = String(Int(round(i)))
             self.addSubview(label)
+            
+            if animation.enabled {
+                let anim = CABasicAnimation(keyPath: "opacity")
+                anim.duration = stackingDuration
+                anim.fromValue = 0
+                anim.toValue = 1
+                label.layer.addAnimation(anim, forKey: "opacity")
+                
+                stackingDuration += 0.15
+            }
         }
     }
     

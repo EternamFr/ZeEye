@@ -2,8 +2,8 @@
 //  Company.swift
 //  ZeEye
 //
-//  Created by David Christy on 20/02/2015.
-//  Copyright (c) 2015 David Christy. All rights reserved.
+//  Created by David Christy on 11/10/2015.
+//  Copyright © 2015 David Christy. All rights reserved.
 //
 
 import Foundation
@@ -43,48 +43,3 @@ struct Company : HasJsonInitializer {
         }
     }
 }
-
-struct ProcessCount : HasJsonInitializer {
-    let evaluationTypeId: EvaluationType?
-    let count: Int?
-    let processTemplateName: String?
-    let processTemplateId: Int?
-    
-    init(json: [String:AnyObject], index: Int) {
-        evaluationTypeId = EvaluationType(rawValue:json["evaluationTypeId"] as? Int ?? 0)
-        processTemplateName = json["processTemplateName"] as? String
-        processTemplateId = json["processTemplateId"] as? Int
-        count = json["count"] as? Int
-    }
-//    "evaluationTypeId": 6,
-//    "processTemplateName": "HR Review 2014/2015",
-//    "count": 147,
-//    "processTemplateId": 2
-}
-
-struct Activity : HasJsonInitializer {
-    let date: String?
-    let stepCompleted: CGFloat?
-    let sequenceCompleted: CGFloat?
-    let day: Int?
-    let month: Int?
-    let dayName: String?
-    let weekNumber: Int?
-    
-    init(json: [String:AnyObject], index: Int) {
-        date = json["date"] as? String
-        stepCompleted = json["stepCompleted"] as? CGFloat
-        sequenceCompleted = json["sequenceCompleted"] as? CGFloat
-        day = json["day"] as? Int
-        month = json ["month"] as? Int
-        dayName = json["dayName"] as? String
-        weekNumber = json["weekNumber"] as? Int
-    }
-}
-//"day": 27,
-//"sequenceCompleted": 0,
-//"month": 9,
-//"stepCompleted": 5,
-//"dayName": "Sunday",
-//"weekNumber": 39,
-//"date": "27-09-2015"

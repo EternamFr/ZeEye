@@ -47,10 +47,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         defaultCompanyImage = UIImage(named: path!)!
         
         // request company data
-        self.dataService.GetCompanies(TestCompletion)
+        self.dataService.GetCompanies(receivedCompaniesData)
     }
     
-    func TestCompletion(companies: [Company]?) -> Void {
+    func receivedCompaniesData(companies: [Company]?) -> Void {
         // Update UI on main thread
         dispatch_async(dispatch_get_main_queue()) {
             // update "last updated" title for refresh control
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func refresh(sender:AnyObject)
     {
-        self.dataService.GetCompanies(TestCompletion)
+        self.dataService.GetCompanies(receivedCompaniesData)
     }
     
     override func didReceiveMemoryWarning() {

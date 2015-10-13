@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol HasJsonInitializer {
-    init(json: [String:AnyObject], index: Int)
-}
-
 struct DataService {
     
     func GetEntities<U: HasJsonInitializer>(url: String, key: String, completion: ([U]?->Void)) {
@@ -52,4 +48,9 @@ struct DataService {
     func GetActivities(completion: ([Activity]?->Void), companyUuid: String, todayOffset: Int) {
         self.GetEntities("https://stories.xafir.com/api/v1/companies/\(companyUuid)/activities?todayoffset=\(todayOffset)", key: "activities", completion: completion)
     }
+    
+    func GetSequencesCount(completion: ([SequenceCount]?->Void), companyUuid: String, processTemplateId: Int) {
+        self.GetEntities("https://stories.xafir.com/api/v1/companies/\(companyUuid)/ActiveSequencesCount/\(processTemplateId)", key: "activities", completion: completion)
+    }
 }
+
